@@ -3,6 +3,9 @@ header {
   height: 100vh;
   background: url("/img/code4.jpg") no-repeat 50% 50%;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .logo {

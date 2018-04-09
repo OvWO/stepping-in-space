@@ -2,7 +2,7 @@
       <div class="box header">Header</div>
 </nav>
  --}}
-
+<div class="background-image"></div>
 <div class="wrapper header">
     <header>
       <nav>
