@@ -13,4 +13,12 @@ let mix = require('laravel-mix');
 
 mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css')
+   .sass('resources/assets/sass/layouts.scss', 'public/css')
+   .sass('resources/assets/sass/navbar.scss', 'public/css')
    .browserSync('stepping-in-space.test');
+
+
+    // mix.styles([
+    //     'normalize.css',
+    //     'main.css'
+    // ], 'public/assets/css/site.css');

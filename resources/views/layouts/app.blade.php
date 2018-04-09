@@ -1,31 +1,55 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSRF Token -->
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <title>{{ config('app.name', 'Laravel') }}</title>
+  <!-- Scripts -->
+  <script src="{{ asset('js/app.js') }}" defer></script>
+  <!-- Fonts -->
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+  <!-- Styles -->
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/layouts.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <div id="app">
-            @include('layouts.header')
-        <main class="py-4">
-            @yield('content')
-        </main>
+  <div id="app" {{-- class="wrapper" --}}>
+    {{-- <div class="wrapper"> --}}
+    @include('layouts.header')
+    <main>
+      @yield('content')
+    </main>
+    @include('layouts.footer')
     </div>
+  {{-- </div> --}}
+  <script type="text/javascript">
+  //Menu toggle-button
+
+  $(document).ready(function() {
+    $(".menu-icon").on("click", function() {
+      $("nav ul").toggleClass("showing");
+    });
+  });
+
+  //Scrolling Effect
+  $(window).on("scroll", function() {
+    if ($(window).scrollTop()) {
+      $('nav').addClass('black');
+    } else {
+      $('nav').removeClass('black');
+    }
+  })
+
+  </script>
 </body>
+
 </html>
