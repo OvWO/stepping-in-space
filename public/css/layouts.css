@@ -25,7 +25,7 @@
   grid-template-areas: "header" "content" "sidebar2" "footer";
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 568px) {
   .wrapper {
     grid-template-columns: 10% 80% 10%;
     grid-template-areas: "header  header  header" "content content content" "footer  footer  footer";

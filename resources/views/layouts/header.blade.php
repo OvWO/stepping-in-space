@@ -22,5 +22,11 @@
         </div>
       </nav>
     </header>
+      <div class="header-content">
+    <h1> Web and Mobile Development </h1>
+    <a href="#about" class="navigate">
+      <div><i class="fas fa-angle-double-down"></i></div>
+    </a>
+  </div>
     </div>
 
