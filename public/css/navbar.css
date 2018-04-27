@@ -20,11 +20,12 @@ header {
 nav {
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 
 nav ul {
   list-style: none;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.6);
   overflow: hidden;
   color: #fff;
   text-align: center;
@@ -58,6 +59,13 @@ nav ul li a {
   cursor: pointer;
   color: #fff;
   display: none;
+}
+.logo:hover {
+  color: #56ff50;
+}
+
+nav a:hover:not(#logo) {
+  color: #67d0f9;
 }
 
 @media (max-width: 580px) {

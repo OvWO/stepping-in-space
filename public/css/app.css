@@ -271,11 +271,15 @@ section#about p {
   background: linear-gradient(to bottom right, #b34dd4, #f77729);
 }
 
+#contact h3 {
+  margin-top: 10px;
+}
+
 #skills-icons {
+  margin-top: 4px;
   display: inline-block;
   padding: 1rem;
   max-width: 90%;
-  padding-left: 5%;
 }
 
 #skills-icons img {
@@ -380,6 +384,30 @@ section#about p {
 #contact-me form textarea:focus {
   background: -webkit-gradient(linear, left top, right bottom, from(#fff), to(#ccc));
   background: linear-gradient(to bottom right, #fff, #ccc);
+}
+
+#contact-me ul {
+  list-style: none;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#contact-me ul li {
+  display: inline-block;
+  padding: 20px;
+}
+
+#contact-me ul li a {
+  font-size: 72px;
+  position: relative;
+  text-align: center;
+  top: 10px;
+  text-decoration: none;
+  color: #fff;
 }
 
 /*************************************************************/

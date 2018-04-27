@@ -24,6 +24,7 @@
 </head>
 
 <body>
+
   <div id="app" {{-- class="wrapper" --}}>
     {{-- <div class="wrapper"> --}}
 

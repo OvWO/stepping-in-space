@@ -11,7 +11,7 @@ body {
 }
 
 .light-blue {
-    color:#0ff;
+  color: #0ff;
 }
 
 .yellow {
@@ -27,8 +27,9 @@ body {
 }
 
 .purple {
-color: #b34dd4
+  color: #b34dd4
 }
+
 
 /*************************************************************/
 
@@ -94,6 +95,8 @@ color: #b34dd4
 
 
 
+
+
 /*************************************************************/
 
 
@@ -154,6 +157,8 @@ section#about p {
 
 
 
+
+
 /*************************************************************/
 
 
@@ -199,6 +204,8 @@ section#about p {
 
 
 
+
+
 /*************************************************************/
 
 
@@ -228,6 +235,8 @@ section#about p {
   float: none; // line-height: 1.8rem;
   font-size: 150%;
 }
+
+
 
 
 /*************************************************************/
@@ -285,11 +294,15 @@ section#about p {
   background: linear-gradient(to bottom right, #b34dd4, #f77729); // background-color: #b34dd4;
 }
 
+#contact h3 {
+  margin-top: 10px;
+}
+
 #skills-icons {
+  margin-top: 4px;
   display: inline-block;
   padding: 1rem;
   max-width: 90%;
-  padding-left: 5%;
 }
 
 #skills-icons img {
@@ -358,24 +371,21 @@ section#about p {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   background: #ccc;
   font-size: 20px;
-  width: 94.5%;
-  // width: 100%;
+  width: 94.5%; // width: 100%;
   padding: 10px;
   border: 1px solid #000;
   line-height: 1.3;
   border-radius: 10px;
 }
 
-
 #contact-me form input,
 #contact-me form textarea,
 #contact-me form button {
-   margin-left: 4%;
+  margin-left: 4%;
 }
 
 #contact-me form button {
   // display: block;
-
   padding: 1rem 0;
   border: 1px solid #000;
   background: linear-gradient(to bottom right, #0ff, #b34dd4); // background-color: #2690d4;
@@ -383,10 +393,8 @@ section#about p {
   font-weight: bold;
   font-size: 100%;
   border-radius: 10px;
-  transition: 1s;
-  // width: 97.8%;
-  width: 100%;
-  // position: relative;
+  transition: 1s; // width: 97.8%;
+  width: 100%; // position: relative;
 }
 
 #contact-me form button:hover,
@@ -401,12 +409,31 @@ section#about p {
 }
 
 
-// #contact-me a {
-//   font-size: 72.3px;
-//   position: relative;
-//   text-align: center;
-//   top: 20px;
-// }
+#contact-me ul {
+  list-style: none; // background: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  -webkit-transition: 1s;
+  transition: 1s; // padding-left
+}
+
+#contact-me ul li {
+  display: inline-block;
+  padding: 20px;
+}
+
+#contact-me ul li a {
+  font-size: 72px;
+  position: relative;
+  text-align: center;
+  top: 10px;
+  text-decoration: none;
+  color: #fff;
+}
+
+
 
 /*************************************************************/
 
