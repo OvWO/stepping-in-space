@@ -1,3 +1,4 @@
+{{-- https://safe-atoll-78199.herokuapp.com/ --}}
 @extends('layouts.app') @section('content')
 <div class="wrapper">
   <div class="content">
@@ -32,7 +33,7 @@
         </li>
         <li>
           <div class="card">
-            <img src="img/code1.jpeg" alt="project">
+            <img src="img/trigonometry.png" alt="project">
             <div class="card-content">
               A Python program that helped me and my classmates do our math's homework.
             </div>
@@ -98,10 +99,10 @@
             <span class="tooltiptext">PHP</span>
             <a href=""><img src="img/php.svg" alt="PHP"></a>
           </div>
-{{--           <div class="tooltip">
+          <div class="tooltip">
             <span class="tooltiptext">MySql</span>
             <a href="https://www.mysql.com/"><img src="img/mysql.png" alt="MySql"></a>
-          </div> --}}
+          </div>
           <div class="tooltip">
             <span class="tooltiptext">Git</span>
             <a href="https://git-scm.com/"><img src="img/git.png" alt="Git"></a>

@@ -20,12 +20,11 @@ header {
 nav {
   position: fixed;
   width: 100%;
-  z-index: 2;
 }
 
 nav ul {
   list-style: none;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.9);
   overflow: hidden;
   color: #fff;
   text-align: center;
@@ -35,7 +34,7 @@ nav ul {
 }
 
 nav.black ul {
-  background: rgba(0, 0, 0, 0.8);
+  background: black;
 }
 
 nav ul li {
@@ -61,15 +60,7 @@ nav ul li a {
   display: none;
 }
 
-.logo:hover {
-  color: #56ff50;
-}
-
-nav a:hover:not(#logo) {
-  color: #67d0f9;
-}
-
-@media (max-width: 1024px) {
+@media (max-width: 580px) {
   .logo {
     position: fixed;
     top: 0;
@@ -78,15 +69,15 @@ nav a:hover:not(#logo) {
 
   nav ul {
     max-height: 0px;
-  background: rgba(0, 0, 0, 0.8);
+    background: #000;
   }
 
   nav.black ul {
-  background: rgba(0, 0, 0, 0.8);
+    background: #000;
   }
 
   .showing {
-    max-height: 540em;
+    max-height: 20em;
   }
 
   nav ul li {

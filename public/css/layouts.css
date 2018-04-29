@@ -20,11 +20,6 @@
   color: #444;
 }
 
-.wrapper {
-  display: grid;
-  grid-template-areas: "header" "content" "sidebar2" "footer";
-}
-
 /*************************************************************/
 
 /*************************** Tablet **************************/
