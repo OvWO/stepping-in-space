@@ -110,6 +110,7 @@ body {
 }
 
 section {
+  font-size: 110%;
   max-width: 70%;
   margin: auto;
   padding: 50px;
@@ -117,7 +118,7 @@ section {
 }
 
 section h2 {
-  font-size: 200%;
+  font-size: 230%;
   text-align: center;
   padding-bottom: 30px;
 }
@@ -129,10 +130,6 @@ section h2 {
   width: 48%;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-#about h2 {
-  font-size: 270%;
 }
 
 section#about p {
@@ -157,6 +154,8 @@ section#about p {
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100%;
+  background-image: url("/img/code4.jpg");
+  min-height: 400px;
 }
 
 .parallax-text {
@@ -175,11 +174,6 @@ section#about p {
   background-color: #000;
   color: #fff;
   padding: 20px;
-}
-
-.parallax-image1 {
-  background-image: url("/img/code4.jpg");
-  min-height: 400px;
 }
 
 /*************************************************************/

@@ -52,8 +52,7 @@
     <div class="parallax-image1">
       <div class="parallax-text">
         <span class="border">
-        SKILLS & CONTACT
-      </span>
+        SKILLS & CONTACT</span>
       </div>
     </div>
     <section id="contact">
@@ -157,7 +156,7 @@
         </form>
       </div>
     </section>
-    <div class="parallax-image1">
+    <div class="parallax-image3">
       <div class="parallax-text">
         <span class="border">
         THANKS FOR STOPPING BY

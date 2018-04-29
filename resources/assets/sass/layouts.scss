@@ -22,20 +22,233 @@
 
 .wrapper {
   display: grid;
-  grid-template-areas: "header"
-                       "content"
-                       "sidebar2"
-                       "footer"
+  grid-template-areas: "header" "content" "sidebar2" "footer"
 }
 
-@media only screen and (max-width: 580px) {
-  .wrapper {
-    grid-template-columns: 10% 80% 10%;
-    grid-template-areas: "header  header  header"
-                         "content content content"
-                         "footer  footer  footer";
+// @media only screen and (max-width: 1024px) {
+//   .wrapper {
+//     grid-template-columns: 10% 80% 10%;
+//     grid-template-areas: "header  header  header" "content content content" "footer  footer  footer";
+//   }
+// }
+
+/*************************************************************/
+
+
+/*************************** Tablet **************************/
+
+
+/*************************************************************/
+
+@media only screen and (max-width: 768px) {
+  html,
+  body {
+    line-height: 1.8em; // overflow-X: hidden;
+    font-size: 90%;
+  }
+  .header-content {
+
+    top: 50vh;
+    font-size: 130%;
+  }
+
+  .header-content h1 {
+    padding: 15px;
+  }
+
+  .navigate {
+    font-size: 500%;
+    margin: 15px auto;
+  }
+
+  .navigate div {
+    width: 78.8px;
+    height: 78.8px;
+    top: 5px;
+    border-radius: 50%;
+  }
+
+  .parallax-text {
+
+    // top: 50%;
+    // text-align: center;
+    padding: 5px 8px;
+    font-size: 200%;
+    letter-spacing: 8px;
+    font-weight: bold;
+  }
+  section {
+    max-width: 93%;
+    padding: 10px;
+  }
+
+
+
+  #me {
+    height: 350px;
+    float: none;
+    width: 100%;
+  } // #about h2 {
+  h2 {
+    font-size: 300%;
+  }
+
+  section#about p,
+  .card-content {
+    width: 100%;
+    float: none;
+    line-height: 1.8rem;
+    font-size: 150%;
+  } //    {
+  //   width: 100%;
+  //   line-height: 1.8rem;
+  //   font-size: 150%;
+  // }
+  // #portfolio ul {
+  //   display: block;
+  // }
+  // #portfolio li {
+  //   width: 100%;
+  // }
+  // #contact>* {
+  //   font-size: 80%;
+  // }
+  #contact {
+    // font-size: 10px;
+    display: block;
+  }
+
+
+
+
+  #skills {
+    width: 100%;
+  }
+  #skills-icons {
+    margin: auto;
+  }
+  #skills-icons img {
+    width: 80px;
+    height: 80px;
+  }
+
+  #contact-me {
+    width: 94%;
+    padding-left: 0px;
+  }
+
+  #contact-me form button {
+
+    width: 98%;
+  } // .parallax-image3 .parallax-text {
+  //   // line-height: 60px;
+  //   font-size: 200%;
+  // }
+  #main-footer {
+    font-size: 150%;
   }
 }
+
+
+
+/*************************************************************/
+
+
+/*************************** Phone **************************/
+
+
+/*************************************************************/
+
+@media only screen and (max-width: 480px) {
+
+  html,
+  body {
+    line-height: 1.8em;
+    font-size: 90%;
+  }
+  .header-content {
+    font-size: 120%;
+    line-height: 1.9rem;
+  }
+
+  .header-content h1 {
+    padding: 15px;
+  }
+
+  .navigate {
+    font-size: 500%;
+    margin: 15px auto;
+  }
+
+  .navigate div {
+    width: 72px;
+    height: 72px;
+    top: 5px;
+    border-radius: 50%;
+  }
+
+  .parallax-text {
+    padding: 5px 8px;
+    font-size: 130%;
+    letter-spacing: 8px;
+    font-weight: bold;
+  }
+  section {
+    max-width: 93%;
+    padding: 10px;
+  }
+
+
+
+  #me {
+    height: 350px;
+    float: none;
+    width: 100%;
+  } // #about h2 {
+  section h2 {
+    font-size: 210%;
+  }
+
+  section#about p,
+  .card-content {
+    width: 100%;
+    float: none;
+    line-height: 1.8rem;
+    font-size: 150%;
+  }
+
+
+
+
+  #portfolio ul {
+    display: block;
+  }
+  #portfolio li {
+    width: 100%;
+  }
+
+  #contact>* {
+    font-size: 80%;
+  }
+
+
+
+
+  #contact-me form button {
+
+    width: 101%;
+  }
+
+  .parallax-image3 .parallax-text {
+    line-height: 50px;
+    font-size: 90%;
+  }
+}
+
+
+
+
+
 
 .clearfix:before,
 .clearfix:after {
@@ -46,12 +259,3 @@
 .clearfix:after {
   clear: both;
 }
-
-
-
-
-
-
-
-
-
