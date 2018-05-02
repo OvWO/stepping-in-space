@@ -6,7 +6,7 @@
     {{ $task->title }}
     {{ $task->complete }}
     <a href="/tasks/{{ $task->id }}/edit">Edit</a>
-    <a href="/tasks">Destroy</a>
+    {{-- <a href="/tasks">Destroy</a> --}}
 
     <form action="/tasks/markAsDone/{{ $task->id }}" method="POST">
         {{ csrf_field() }}

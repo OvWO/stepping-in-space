@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Auth;
 use App\Task;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class TasksController extends Controller
 {
@@ -15,9 +16,8 @@ class TasksController extends Controller
      */
     public function index(Task $task)
     {
-        // dd('hellow');
         $tasks = Task::where('user_id', Auth::id())
-        ->orderBy('created_at', 'asc')
+        ->orderBy('created_at', 'desc')
         ->get();
         /*->paginate(7)*/
 
@@ -83,12 +83,11 @@ class TasksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    // public function edit(Task $task)
-    // {
-    //     dump('hola');
-    //     $task = Task::find($task->id);
-    //     return view('tasks.index', compact('task'));
-    // }
+    public function edit(Task $task)
+    {
+        $task = Task::find($task->id);
+        return view('tasks.edit', compact('task'));
+    }
 
     /**
      * Update the specified resource in storage.
@@ -127,8 +126,9 @@ class TasksController extends Controller
      */
     public function destroy($id)
     {
+                  var_dump('hola');
+
           Task::findOrFail($id)->delete();
-          dump('hola');
           return redirect('/tasks')->with('message', 'Task has been deleted!!');
     }
 
