@@ -15,6 +15,15 @@ Route::get('/', function () {
     return view('home');
 });
 
-Auth::routes();
+// Route::get('/', function () {
+//     return view('home');
+// });
 
-// Route::get('/home', 'HomeController@index')->name('home');
+
+
+Auth::routes();
+Route::resource('tasks', 'TasksController');
+
+Route::resource('tasks', 'TasksController');
+Route::post('/tasks/markAsDone/{id}', 'TasksController@markAsDone');
+Route::post('/tasks/markAsUndone/{id}', 'TasksController@markAsUndone');
