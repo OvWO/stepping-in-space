@@ -12,9 +12,13 @@ let mix = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
+    /* HOME */
    .sass('resources/assets/sass/app.scss', 'public/css')
+   /* GENERAL */
    .sass('resources/assets/sass/layouts.scss', 'public/css')
    .sass('resources/assets/sass/navbar.scss', 'public/css')
+   /* TASKS */
+   .sass('resources/assets/sass/tasks.scss', 'public/css')
    .browserSync('stepping-in-space.test');
 
 

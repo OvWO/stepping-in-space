@@ -1,10 +1,14 @@
-@extends('layouts.app')
+@extends('layouts.tasks')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
+<div class="wrapper bg-img" >
+    <div class="header-content">
+      {{-- <h1> Web and Android Development </h1>
+      <br> --}}
+{{--       <a href="#about" class="navigate">
+        <div><i class="fas fa-angle-double-down"></i></div>
+      </a>
+ --}}
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
@@ -70,8 +74,9 @@
                         </div>
                     </form>
                 </div>
-            </div>
-        </div>
-    </div>
+
+
 </div>
+</div>
+
 @endsection

@@ -36,6 +36,16 @@ body {
 
 /*************************************************************/
 
+.bg-img {
+  width: 100vw;
+  height: 100vh;
+  background: url("/img/code4.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
 .header-content {
   position: relative;
   text-align: center;
@@ -448,6 +458,5 @@ section#about p {
 #main-footer a#back-to-top:hover {
   background: -webkit-gradient(linear, left top, right bottom, from(#56ff50), to(#0ff));
   background: linear-gradient(to bottom right, #56ff50, #0ff);
-  color: #aaa;
 }
 

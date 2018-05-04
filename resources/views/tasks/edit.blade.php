@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.tasks')
 
 @section('content')
     <h1>Editing</h1>

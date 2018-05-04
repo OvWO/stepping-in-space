@@ -11,12 +11,15 @@
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}" defer></script>
   <!-- Fonts -->
-    <!-- Styles -->
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <!-- Styles -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link href="{{ asset('css/layouts.css') }}" rel="stylesheet">
   <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/tasks.css') }}" rel="stylesheet">
+
   <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 
@@ -25,7 +28,7 @@
   <div id="app" {{-- class="wrapper" --}}>
     {{-- <div class="wrapper"> --}}
 
-    @include('layouts.header')
+    @include('layouts.navbar')
     <main>
       @yield('content')
     </main>

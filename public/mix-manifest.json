@@ -2,5 +2,6 @@
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/css/layouts.css": "/css/layouts.css",
-    "/css/navbar.css": "/css/navbar.css"
+    "/css/navbar.css": "/css/navbar.css",
+    "/css/tasks.css": "/css/tasks.css"
 }

@@ -40,6 +40,17 @@ body {
 
 /*************************************************************/
 
+.bg-img {
+  width: 100vw;
+  height: 100vh;
+  background: url("/img/code4.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
 .header-content {
   position: relative;
   text-align: center;
@@ -58,8 +69,6 @@ body {
   text-transform: uppercase;
   letter-spacing: 3px;
 }
-
-
 
 .navigate div {
   width: 100px;
@@ -465,5 +474,5 @@ section#about p {
 
 #main-footer a#back-to-top:hover {
   background: linear-gradient(to bottom right, #56ff50, #0ff);
-  color: #aaa;
+  // color: #aaa;
 }
