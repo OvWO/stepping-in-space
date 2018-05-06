@@ -16,12 +16,12 @@
         <li><a href="{{ route('tasks.index') }}"><i class="fas fa-paste"></i> Tasks</a></li>
       @guest
         <li><a href="{{ route('login') }}"><i class="fas fa-sign-in-alt"></i> Login</a></li>
-        <li><a href="{{ route('register') }}"><i class="fa fa-user" aria-hidden="true"></i> Register</a></li>
+        <li><a href="{{ route('register') }}"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</a></li>
       @else
       <li>
         <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
-              Logout
+              <i class="fas fa-sign-out-alt"></i> Logout
             </a>
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
           {{ csrf_field() }}

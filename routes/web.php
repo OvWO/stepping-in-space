@@ -27,3 +27,7 @@ Route::resource('tasks', 'TasksController');
 Route::resource('tasks', 'TasksController');
 Route::post('/tasks/markAsDone/{id}', 'TasksController@markAsDone');
 Route::post('/tasks/markAsUndone/{id}', 'TasksController@markAsUndone');
+
+Route::get('/test', function() {
+    return view('test');
+})->name('test');

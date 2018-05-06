@@ -10,33 +10,39 @@
   <title>{{ config('app.name', 'Laravel') }}</title>
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}" defer></script>
-  <!-- Fonts -->
-  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <!-- Styles -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link href="{{ asset('css/layouts.css') }}" rel="stylesheet">
   <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/tasks.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/form.css') }}" rel="stylesheet">
-
+  <link href="{{ asset('css/form.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/tasks.css') }}" rel="stylesheet">
   <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
   <div id="app">
-
     @include('layouts.navbar')
     <main>
-      @yield('content')
+      <div class="wrapper bg-img">
+        <div id="tasks-div">
+          <form method="POST" action="/tasks">
+      {{ csrf_field() }}
+      <div>
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" name="title" required>
+                <button type="submit" class="btn btn-primary">Publish</button>
+
+      </div>
+
+      @include('partials.errors')
+
+    </form>
+      </div>
     </main>
     @include('layouts.footer')
-    </div>
+  </div>
   <script type="text/javascript">
-  //Menu toggle-button
-
   $(document).ready(function() {
     $(".menu-icon").on("click", function() {
       $("nav ul").toggleClass("showing");

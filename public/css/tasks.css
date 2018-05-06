@@ -1,0 +1,112 @@
+#tasks-div {
+  width: 60%;
+  height: 70%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 60px 50px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+
+#tasks-div button {
+  border: 1px solid #000;
+  font-size: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#tasks-div form label {
+  font-size: 110%;
+}
+
+#tasks-div form input,
+#tasks-div form button {
+  height: 3%;
+}
+
+#tasks-div form input {
+  padding: 5px;
+  width: 30%;
+  border: none;
+  border-bottom: 2px solid #0ff;
+  background: rgba(0, 0, 0, 0.6);
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+#tasks-div form button {
+  padding: 10px;
+  width: 30%;
+  margin: auto;
+  background: -webkit-gradient(linear, left top, right bottom, from(#0ff), to(#b34dd4));
+  background: linear-gradient(to bottom right, #0ff, #b34dd4);
+  border-radius: 10px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#current-tasks {
+  margin: 10px;
+}
+
+.task-row {
+  font-size: 20px;
+}
+
+div.task-row {
+  margin: 10px;
+  padding: 20px;
+}
+
+.task-row p {
+  display: inline-block;
+}
+
+div.buttons {
+  display: inline-block;
+  float: right;
+  position: relative;
+  vertical-align: middle;
+  margin: auto;
+  top: -15px;
+}
+
+div.buttons button,
+#current-tasks .task-row button {
+  padding: 10px 12px;
+}
+
+form {
+  display: inline-block;
+}
+
+button:hover {
+  color: #fff;
+}
+
+button.edit {
+  background: -webkit-gradient(linear, left top, right bottom, from(#0ff), to(#b34dd4));
+  background: linear-gradient(to bottom right, #0ff, #b34dd4);
+}
+
+#current-tasks .task-row button.check {
+  background: -webkit-gradient(linear, left top, right bottom, from(#56ff50), to(#0ff));
+  background: linear-gradient(to bottom right, #56ff50, #0ff);
+}
+
+#current-tasks .task-row button.delete {
+  background: -webkit-gradient(linear, left top, right bottom, from(#b34dd4), to(red));
+  background: linear-gradient(to bottom right, #b34dd4, red);
+}
+

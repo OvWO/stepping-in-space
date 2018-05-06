@@ -17,6 +17,7 @@ mix.js('resources/assets/js/app.js', 'public/js')
    /* GENERAL */
    .sass('resources/assets/sass/layouts.scss', 'public/css')
    .sass('resources/assets/sass/navbar.scss', 'public/css')
+   .sass('resources/assets/sass/form.scss', 'public/css')
    /* TASKS */
    .sass('resources/assets/sass/tasks.scss', 'public/css')
    .browserSync('stepping-in-space.test');

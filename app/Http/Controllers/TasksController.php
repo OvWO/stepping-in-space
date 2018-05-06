@@ -127,7 +127,6 @@ class TasksController extends Controller
     public function destroy($id)
     {
                   var_dump('hola');
-
           Task::findOrFail($id)->delete();
           return redirect('/tasks')->with('message', 'Task has been deleted!!');
     }

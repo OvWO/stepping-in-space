@@ -1,0 +1,126 @@
+.login-box {
+  width: 420px;
+  height: 445px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 70px 30px;
+  border-radius: 20px;
+  font-size: 130%;
+  letter-spacing: 1px;
+}
+
+.avatar {
+  font-size: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+
+h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+}
+
+.login-box label {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #0ff;
+}
+
+.login-box input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.login-box input::-webkit-input-placeholder {
+  color: #bbb;
+}
+
+.login-box input:-ms-input-placeholder {
+  color: #bbb;
+}
+
+.login-box input::-ms-input-placeholder {
+  color: #bbb;
+}
+
+.login-box input::placeholder {
+  color: #bbb;
+}
+
+.login-box input[type="text"],
+.login-box input[type="email"],
+input[type="password"] {
+  border: none;
+  border-bottom: 2px solid #0ff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.login-box button {
+  padding: 15px;
+  border: 1px solid #000;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right bottom, from(#0ff), to(#b34dd4));
+  background: linear-gradient(to bottom right, #0ff, #b34dd4);
+  color: #000;
+  font-size: 22px;
+  border-radius: 50px;
+  font-weight: bold;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.login-box button:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+.login-box a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #eee;
+  font-weight: bold;
+  position: relative;
+  top: 20px;
+}
+
+.login-box a:hover {
+  color: #0ff;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-animation: autofill 0s forwards;
+  animation: autofill 0s forwards;
+}
+
+@keyframes autofill {
+  100% {
+    background: transparent;
+    color: inherit;
+  }
+}
+
+@-webkit-keyframes autofill {
+  100% {
+    background: transparent;
+    color: inherit;
+  }
+}
+
