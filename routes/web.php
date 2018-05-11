@@ -15,9 +15,9 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-// Route::get('/', function () {
-//     return view('home');
-// });
+Route::get('/home', function () {
+    return redirect('/');
+});
 
 
 

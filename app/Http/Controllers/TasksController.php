@@ -16,13 +16,18 @@ class TasksController extends Controller
      */
     public function index(Task $task)
     {
-        $tasks = Task::where('user_id', Auth::id())
-        ->orderBy('created_at', 'desc')
-        ->get();
+        if (Auth::check()) {
+            $tasks = Task::where('user_id', Auth::id())
+                ->orderBy('created_at', 'desc')
+                ->get();
         /*->paginate(7)*/
+            return view('tasks.index', compact('tasks'));
 
-        return view('tasks.index', compact('tasks'));
+        }
 
+       return redirect('login')
+                    ->with('message', 'You must login to access your tasks');
+;
     }
 
     /**

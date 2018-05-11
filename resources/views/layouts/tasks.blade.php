@@ -28,6 +28,13 @@
 
   <div id="app">
 
+
+        @if ($flash = session('message'))
+            <div class="alert alert-success" id="flash-message" role="alert">
+                {{ session('message') }}{{-- {{ $flash }} --}}
+            </div>
+        @endif
+
     @include('layouts.navbar')
     <main>
       @yield('content')

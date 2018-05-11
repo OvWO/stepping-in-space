@@ -18,7 +18,8 @@
 <strong>{{ $errors->first('password') }}</strong>
 </span> @endif
       <button type="submit">Log In <i class="fas fa-sign-in-alt"></i></button>
-      <a href="{{ route('password.request') }}">Forgot your password?</a>
+      <a href="{{ route('password.request') }}">Forgot your password?</a><br>
+      <a href="{{ route('register') }}">Want an account</a>
     </form>
   </div>
 </div>

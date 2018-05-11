@@ -1,10 +1,9 @@
 #tasks-div {
-  width: 60%;
-  height: 70%;
   background: rgba(0, 0, 0, 0.8);
   color: #fff;
   top: 50%;
   left: 50%;
+  width: 70%;
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -14,29 +13,24 @@
   border-radius: 20px;
   letter-spacing: 1px;
   font-size: 18px;
-}
-
-#tasks-div button {
-  border: 1px solid #000;
-  font-size: 20px;
-  border-radius: 10px;
-  font-weight: bold;
-  -webkit-transition: 1s;
-  transition: 1s;
+  overflow: auto;
 }
 
 #tasks-div form label {
   font-size: 110%;
+  width: 20%;
 }
 
-#tasks-div form input,
-#tasks-div form button {
-  height: 3%;
+#tasks-div form {
+  position: relative;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: auto;
 }
 
 #tasks-div form input {
   padding: 5px;
-  width: 30%;
+  width: 40%;
   border: none;
   border-bottom: 2px solid #0ff;
   background: rgba(0, 0, 0, 0.6);
@@ -45,59 +39,56 @@
   font-size: 18px;
 }
 
-#tasks-div form button {
+#tasks-div form button,
+#tasks-div button.edit {
+  border: 1px solid #000;
+  font-size: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  -webkit-transition: 1s;
+  transition: 1s;
   padding: 10px;
   width: 30%;
   margin: auto;
   background: -webkit-gradient(linear, left top, right bottom, from(#0ff), to(#b34dd4));
   background: linear-gradient(to bottom right, #0ff, #b34dd4);
   border-radius: 10px;
-  -webkit-transition: 1s;
   transition: 1s;
 }
 
 #current-tasks {
-  margin: 10px;
+  margin-top: 10px;
 }
 
 .task-row {
-  font-size: 20px;
-}
-
-div.task-row {
   margin: 10px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .task-row p {
   display: inline-block;
+  font-size: 1.2em;
 }
 
-div.buttons {
-  display: inline-block;
+p.status {
+  color: yellow;
+}
+
+p.status.done {
+  color: #0f0;
+}
+
+p.status.undone {
+  color: #f00;
+}
+
+.task-row .buttons button {
+  width: 10% !important;
   float: right;
   position: relative;
   vertical-align: middle;
   margin: auto;
   top: -15px;
-}
-
-div.buttons button,
-#current-tasks .task-row button {
-  padding: 10px 12px;
-}
-
-form {
-  display: inline-block;
-}
-
-button:hover {
-  color: #fff;
-}
-
-button.edit {
-  background: -webkit-gradient(linear, left top, right bottom, from(#0ff), to(#b34dd4));
-  background: linear-gradient(to bottom right, #0ff, #b34dd4);
 }
 
 #current-tasks .task-row button.check {
@@ -108,5 +99,41 @@ button.edit {
 #current-tasks .task-row button.delete {
   background: -webkit-gradient(linear, left top, right bottom, from(#b34dd4), to(red));
   background: linear-gradient(to bottom right, #b34dd4, red);
+}
+
+#flash-message {
+  background-color: #5bd682;
+  font-size: 1.2rem;
+  color: #265435;
+  top: 12vh;
+  left: 2vw;
+  border-radius: 10px;
+  padding: 10px 5px;
+  position: absolute;
+  z-index: 10;
+  -webkit-animation: flash-message 6s forwards;
+  animation: flash-message 6s forwards;
+}
+
+@-webkit-keyframes flash-message {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes flash-message {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
 }
 
