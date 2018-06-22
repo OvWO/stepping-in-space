@@ -37,9 +37,11 @@
   font-size: 18px;
 }
 
-#tasks-div form button/* #publish-btn */,
-#tasks-div  button.edit
- {
+#tasks-div form button
+/* #publish-btn */
+
+,
+#tasks-div button.edit {
   border: 1px solid #000;
 
   font-size: 20px;
@@ -71,19 +73,19 @@
 }
 
 p.status {
-  color: yellow;
+  letter-spacing: 2px;
 }
 
 p.status.done {
+  font-weight: bold;
   color: #0f0;
 }
 
 p.status.undone {
-color: #f00;
+  color: #f00;
 }
 
-.task-row .buttons button
-// .task-row .buttons a
+.task-row .buttons button // .task-row .buttons a
 {
   width: 10% !important;
   float: right;
@@ -114,17 +116,15 @@ color: #f00;
 #flash-message {
   background-color: #5bd682;
   font-size: 1.2rem;
-  color:#265435;
+  color: #265435;
   top: 12vh;
   left: 2vw;
   border-radius: 10px;
-  padding: 10px 5px;
-  // bottom: 50px;
-  position: absolute;
-  // right: 50px;
+  padding: 10px 5px; // bottom: 50px;
+  position: absolute; // right: 50px;
   z-index: 10;
   -webkit-animation: flash-message 6s forwards;
-          animation: flash-message 6s forwards;
+  animation: flash-message 6s forwards;
 }
 
 @-webkit-keyframes flash-message {

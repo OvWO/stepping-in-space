@@ -8,7 +8,7 @@
       <h2>About <i class="fas fa-question-circle light-green"></i></h2>
       <div class="clearfix">
         <div id="me"></div>
-        <p> My name is Luis Lopez and
+        <p> My name is Luis Lopez born in
             <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque cum labore provident, enim voluptate, ratione id molestiae quisquam et libero sed saepe maiores magnam qui blanditiis quo hic ullam dolore a ipsam quia odio. Aliquam eum magnam quo quis consectetur? Exercitationem ullam repudiandae quisquam earum temporibus fugiat veniam natus!</p>
       </div>
     </section>
@@ -95,6 +95,10 @@
           <div class="tooltip">
             <span class="tooltiptext">Adobe Illustrator</span>
             <a href="https://es.wikipedia.org/wiki/Adobe_Illustrator"><img src="img/AI.png" alt="Adobe Illustrator"></a>
+          </div>
+          <div class="tooltip">
+            <span class="tooltiptext">Figma</span>
+            <a href="https://www.figma.com/"><img src="img/figma.png" alt="Figma"></a>
           </div>
           <div class="tooltip">
             <span class="tooltiptext">PHP</span>

@@ -71,10 +71,11 @@
 }
 
 p.status {
-  color: yellow;
+  letter-spacing: 2px;
 }
 
 p.status.done {
+  font-weight: bold;
   color: #0f0;
 }
 
