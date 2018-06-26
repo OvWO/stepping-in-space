@@ -17,7 +17,7 @@ Route::post('/tasks/markAsDone/{id}', 'TasksController@markAsDone');
 Route::post('/tasks/markAsUndone/{id}', 'TasksController@markAsUndone');
 
 
-Route::get('lang/{lang}', ['as'=>'lang.switch', 'uses'=>'LanguageController@switchLang']);
+// Route::get('lang/{lang}', ['as'=>'lang.switch', 'uses'=>'LanguageController@switchLang']);
 
 Route::get('/test', function() {
     return view('test');
