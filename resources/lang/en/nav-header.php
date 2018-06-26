@@ -6,5 +6,6 @@ return [
     'tasks' => 'Tasks',
     'login' => 'Login',
     'register' => 'Register',
-    'title' => 'Web and Android Development',
+    'logout' => 'Logout',
+    'title' => 'Web & Android Development',
 ];

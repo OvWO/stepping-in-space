@@ -9,7 +9,7 @@
       <div class="clearfix">
         <div id="me"></div>
         <p>{{ __('home.about1') }}
-        <br>{{ __('home.about2') }}</p>
+        <br><br>{{ __('home.about2') }}</p>
       </div>
     </section>
     <div class="parallax-image1">
@@ -116,10 +116,10 @@
             <span class="tooltiptext">Python</span>
             <a href=""><img src="img/python.png" alt="Python"></a>
           </div>
-          <div class="tooltip">
+{{--           <div class="tooltip">
             <span class="tooltiptext">Machine Learning</span>
             <a href="https://en.wikipedia.org/wiki/Machine_learning"><img src="img/ml.png" alt="Machine Learning"></a>
-          </div>
+          </div> --}}
           <div class="tooltip">
             <span class="tooltiptext">Arduino</span>
             <a href="https://www.arduino.cc/"><img src="img/arduino.png" alt="Arduino"></a>
