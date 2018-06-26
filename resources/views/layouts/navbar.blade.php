@@ -8,12 +8,14 @@
   <div class="menu">
     <ul>
       <li><a href="{{ route('home') }}"><i class="fas fa-home"></i> {{ __('nav-header.home') }}</a></li>
-      @if (Request::path() == '/')
-        {{-- <li><a href="#about"><i class="fas fa-question-circle"></i> About</a></li> --}}
-        {{-- <li><a href="#portfolio"><i class="fa fa-suitcase" aria-hidden="true"></i> Portfolio</a></li> --}}
-        {{-- <li><a href="#contact"><i class="fas fa-address-card"></i> Skills & Contact</a></li> --}}
-      @endif
         <li><a href="{{ route('tasks.index') }}"><i class="fas fa-paste"></i> {{ __('nav-header.tasks') }}</a></li>
+        @foreach (Config::get('languages') as $lang => $language)
+          @if ($lang != App::getLocale())
+              <li>
+                  <a href="{{ route('lang.switch', $lang) }}"><i class="fas fa-language"></i> {{$language}}</a>
+              </li>
+          @endif
+        @endforeach
       @guest
         <li><a href="{{ route('login') }}"><i class="fas fa-sign-in-alt"></i> {{ __('nav-header.login') }}</a></li>
         <li><a href="{{ route('register') }}"><i class="fa fa-user-plus" aria-hidden="true"></i> {{ __('nav-header.register') }}</a></li>
@@ -30,4 +32,22 @@
       @endguest
     </ul>
   </div>
+
+
+
 </nav>
+
+{{-- <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        {{ Config::get('languages')[App::getLocale()] }}
+    </a>
+    <ul class="dropdown-menu">
+        @foreach (Config::get('languages') as $lang => $language)
+            @if ($lang != App::getLocale())
+                <li>
+                    <a href="{{ route('lang.switch', $lang) }}">{{$language}}</a>
+                </li>
+            @endif
+        @endforeach
+    </ul>
+</li> --}}
