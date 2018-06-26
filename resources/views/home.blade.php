@@ -5,30 +5,30 @@
   <div class="content">
     <!-- STARTS ABOUT -->
     <section id="about" class="dark">
-      <h2>About <i class="fas fa-question-circle light-green"></i></h2>
+      <h2>{{ __('home.about_header') }} <i class="fas fa-question-circle light-green"></i></h2>
       <div class="clearfix">
         <div id="me"></div>
-        <p> My name is Luis Lopez born in
-            <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque cum labore provident, enim voluptate, ratione id molestiae quisquam et libero sed saepe maiores magnam qui blanditiis quo hic ullam dolore a ipsam quia odio. Aliquam eum magnam quo quis consectetur? Exercitationem ullam repudiandae quisquam earum temporibus fugiat veniam natus!</p>
+        <p>{{ __('home.about1') }}
+        <br>{{ __('home.about2') }}</p>
       </div>
     </section>
     <div class="parallax-image1">
       <div class="parallax-text">
         <span class="border">
-        PORTFOLIO
+        {{ __('home.portfolio') }}
       </span>
       </div>
     </div>
     <!-- ENDS ABOUT -->
     <!-- STARTS PORTFOLIO -->
     <section id="portfolio" class="dark">
-      <h2>Projects I Have Done <i class="fas fa-code blue"></i></h2>
+      <h2>{{ __('home.projects') }} <i class="fas fa-code blue"></i></h2>
       <ul>
         <li>
           <div class="card">
             <img src="img/code1.jpeg" alt="project">
             <div class="card-content">
-              An Arduino Robotic Arm that is controlled with a the computers keyboard.
+              {{ __('home.arduino') }}
             </div>
           </div>
         </li>
@@ -36,7 +36,7 @@
           <div class="card">
             <a href="https://github.com/OvWO/Trigonometry-Homework-Solver"><img src="img/trigonometry.png" alt="project"></a>
             <div class="card-content">
-              A Python program that helped me and my classmates do our math's homework.
+              {{ __('home.python') }}
             </div>
           </div>
         </li>
@@ -44,7 +44,7 @@
           <div class="card">
             <img src="img/code1.jpeg" alt="project">
             <div class="card-content">
-              An attempt to do a smarthouse web interface with Raspberry Pi and Nodejs.
+              {{ __('home.smart_house') }}
             </div>
           </div>
         </li>
@@ -54,12 +54,12 @@
     <div class="parallax-image1">
       <div class="parallax-text">
         <span class="border">
-        SKILLS & CONTACT</span>
+        {{ __('home.skillsAndContact') }}</span>
       </div>
     </div>
     <section id="contact">
       <div id="skills">
-        <h2>Skills <i class="fas fa-chart-bar purple"></i></h2>
+        <h2>{{ __('home.skills') }} <i class="fas fa-chart-bar purple"></i></h2>
         <p>HTML <i class="fab fa-html5 orange"></i>, CSS <i class="fab fa-css3-alt blue"></i> & JS <i class="fab fa-js yellow"></i></p>
         <div class="container">
           <div class="skills web">80%</div>
@@ -69,7 +69,7 @@
           <div class="skills android">40%</div>
         </div>
         <!-- Skills Big Icons -->
-          <h3>Additional Variable Level Skills:</h3>
+          <h3>{{ __('home.various_skills') }}:</h3>
                   <div id="skills-icons">
 
           <div class="tooltip">
@@ -139,13 +139,13 @@
         </div>
       </div>
       <div id="contact-me">
-        <h2>Contact <i class="fas fa-id-card orange"></i></h2>
+        <h2>{{ __('home.contact') }} <i class="fas fa-id-card orange"></i></h2>
         <form action="">
           <label for="email"><i class="fas fa-envelope light-green"></i> Email:</label>
           <input type="email" name="email" placeholder="(Not Working Yet) Your Email">
-          <label for="message"><i class="fas fa-comment purple"></i> Message:</label>
+          <label for="message"><i class="fas fa-comment purple"></i> {{ __('home.message') }}:</label>
           <textarea name="message" cols="20" rows="8" placeholder="Send me a message..."></textarea>
-          <button type="submit"><i class="fas fa-paper-plane"></i> Send</button>
+          <button type="submit"><i class="fas fa-paper-plane"></i> {{ __('home.send_message') }}</button>
           <div id="social-buttons">
               <ul>
                 <li>
@@ -165,7 +165,7 @@
     <div class="parallax-image3">
       <div class="parallax-text">
         <span class="border">
-        THANKS FOR STOPPING BY
+        {{ __('home.bye') }}
       </span>
       </div>
     </div>
