@@ -30,11 +30,15 @@
 
 
         @if ($flash = session('message'))
-            <div class="alert alert-success" id="flash-message" role="alert">
+            <div class="success" id="flash-message" >
                 {{ session('message') }}{{-- {{ $flash }} --}}
             </div>
         @endif
-
+        @if ($flash = session('error'))
+            <div class="alert" id="flash-message" role="alert">
+                {{ session('error') }}{{-- {{ $flash }} --}}
+            </div>
+        @endif
     @include('layouts.navbar')
     <main>
       @yield('content')

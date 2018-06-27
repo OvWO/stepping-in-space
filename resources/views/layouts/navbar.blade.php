@@ -17,13 +17,13 @@
               </li>
           @endif
         @endforeach --}}
-{{--       <li>
+      <li>
         @if ('es' == App::getLocale())
               <a href="{{ route('lang.switch', 'en') }}"><i class="fas fa-language"></i> {{'English'}}</a>
         @else
               <a href="{{ route('lang.switch', 'es') }}"><i class="fas fa-language"></i> {{'Español'}}</a>
         @endif
-      </li> --}}
+      </li>
 
       @guest
         <li><a href="{{ route('login') }}"><i class="fas fa-sign-in-alt"></i> {{ __('nav-header.login') }}</a></li>

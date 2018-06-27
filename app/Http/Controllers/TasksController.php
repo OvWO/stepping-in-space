@@ -59,16 +59,17 @@ class TasksController extends Controller
         // $task->user_id = Auth::id();
         // $task->save();
 
+        if (Task::count() < 3){
+            Task::create([
+                'title' => ucfirst($request['title']),
+                'user_id' => Auth::id()
+            ]);
 
-        Task::create([
-            'title' => ucfirst($request['title']),
-            'user_id' => Auth::id()
-        ]);
-
-        // session()->flash('message', 'New task created successfully');
-
+            return redirect('/tasks')
+                ->with('message', 'New task created successfully');
+        }
         return redirect('/tasks')
-            ->with('message', 'New task created successfully');
+                ->with('error', 'You can\'t have more than three tasks');
     }
 
     /**
@@ -156,3 +157,7 @@ class TasksController extends Controller
         return redirect('tasks');
     }
 }
+
+
+
+

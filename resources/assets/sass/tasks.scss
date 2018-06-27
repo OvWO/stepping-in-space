@@ -119,8 +119,9 @@ p.status.undone {
   color: #265435;
   top: 12vh;
   left: 2vw;
+  border: 2px solid #265435;
   border-radius: 10px;
-  padding: 10px 5px; // bottom: 50px;
+  padding: 10px 7px; // bottom: 50px;
   position: absolute; // right: 50px;
   z-index: 10;
   -webkit-animation: flash-message 6s forwards;
@@ -147,4 +148,10 @@ p.status.undone {
     opacity: 0;
     display: none;
   }
+}
+
+.alert {
+    background-color:  #ce0000 !important;
+  color: #ccc  !important;
+  border: 2px solid #ccc !important;
 }
