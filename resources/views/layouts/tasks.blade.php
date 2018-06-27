@@ -43,7 +43,7 @@
     <main>
       @yield('content')
     </main>
-    @include('layouts.footer')
+    {{-- @include('layouts.footer') --}}
     </div>
   <script type="text/javascript">
   //Menu toggle-button

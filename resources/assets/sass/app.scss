@@ -139,6 +139,7 @@ section h2 {
   font-size: 230%;
   text-align: center;
   padding-bottom: 30px;
+  padding-top:25px;
 }
 
 #me {
@@ -191,7 +192,7 @@ section#about p {
   padding: 7px 13px;
   vertical-align: middle;
   margin: auto;
-  width: 100%;
+  width: 95vw;
   font-size: 300%;
   letter-spacing: 8px;
 }
@@ -202,6 +203,10 @@ section#about p {
   padding: 20px;
 }
 
+.border {
+  margin: auto;
+  min-width: 100%;
+}
 /*************************************************************/
 
 
@@ -430,7 +435,9 @@ section#about p {
   color: #fff;
 }
 
-
+#contact-me div#social-buttons{
+  padding-left:8%;
+}
 
 
 /*************************************************************/

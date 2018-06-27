@@ -39,7 +39,8 @@
   }
 
   .header-content h1 {
-    padding: 15px;
+    padding: 18px;
+    line-height: 35px !important;
   }
 
   .navigate {
@@ -56,9 +57,10 @@
 
   .parallax-text {
     padding: 5px 8px;
-    font-size: 200%;
-    letter-spacing: 8px;
+    font-size: 130% !important;
+    letter-spacing: 5px;
     font-weight: bold;
+    line-height: 57px !important;
   }
 
   section {
@@ -69,16 +71,18 @@
   #me {
     height: 350px;
     float: none;
-    width: 100%;
+    width: 90%;
+    margin: auto;
   }
 
   h2 {
-    font-size: 300%;
+    font-size: 300% !important;
   }
 
   section#about p,
   .card-content {
-    width: 100%;
+    margin: 30px auto;
+    width: 90%;
     float: none;
     line-height: 1.8rem;
     font-size: 150%;
@@ -111,7 +115,7 @@
   }
 
   #main-footer {
-    font-size: 150%;
+    font-size: 130% !important;
   }
 }
 

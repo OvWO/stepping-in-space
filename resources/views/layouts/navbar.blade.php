@@ -9,19 +9,11 @@
     <ul>
       <li><a href="{{ route('home') }}"><i class="fas fa-home"></i> {{ __('nav-header.home') }}</a></li>
         <li><a href="{{ route('tasks.index') }}"><i class="fas fa-paste"></i> {{ __('nav-header.tasks') }}</a></li>
-{{--         @foreach (Config::get('languages') as $lang => $language)
-          @if ($lang != App::getLocale())
-              <li>
-                  <a href="{{ route('lang.switch', $lang) }}"><i class="fas fa-language"></i> {{$language}}</a>
-                  {{ $lang }}
-              </li>
-          @endif
-        @endforeach --}}
       <li>
         @if ('es' == App::getLocale())
-              <a href="{{ route('lang.switch', 'en') }}"><i class="fas fa-language"></i> {{'English'}}</a>
+              <a href="{{ route('lang.switch', 'en') }}">🇺🇸 {{'English'}}</a>
         @else
-              <a href="{{ route('lang.switch', 'es') }}"><i class="fas fa-language"></i> {{'Español'}}</a>
+              <a href="{{ route('lang.switch', 'es') }}">🇲🇽 {{'Español'}} {{-- 🇲🇽 --}}</a>
         @endif
       </li>
 

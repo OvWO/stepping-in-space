@@ -53,7 +53,8 @@
   }
 
   .header-content h1 {
-    padding: 15px;
+    padding: 18px;
+    line-height: 35px !important;
   }
 
   .navigate {
@@ -73,9 +74,10 @@
     // top: 50%;
     // text-align: center;
     padding: 5px 8px;
-    font-size: 200%;
-    letter-spacing: 8px;
+    font-size: 130% !important;
+    letter-spacing: 5px;
     font-weight: bold;
+    line-height: 57px !important;
   }
   section {
     max-width: 93%;
@@ -87,39 +89,25 @@
   #me {
     height: 350px;
     float: none;
-    width: 100%;
+    width: 90%;
+    margin: auto;
   } // #about h2 {
   h2 {
-    font-size: 300%;
+    font-size: 300% !important
   }
 
   section#about p,
   .card-content {
-    width: 100%;
+    // padding: 20px;
+    margin: 30px auto;
+    width: 90%;
     float: none;
     line-height: 1.8rem;
     font-size: 150%;
-  } //    {
-  //   width: 100%;
-  //   line-height: 1.8rem;
-  //   font-size: 150%;
-  // }
-  // #portfolio ul {
-  //   display: block;
-  // }
-  // #portfolio li {
-  //   width: 100%;
-  // }
-  // #contact>* {
-  //   font-size: 80%;
-  // }
+  }
   #contact {
-    // font-size: 10px;
     display: block;
   }
-
-
-
 
   #skills {
     width: 100%;
@@ -137,6 +125,8 @@
     padding-left: 0px;
   }
 
+
+
   #contact-me form button {
 
     width: 98%;
@@ -145,7 +135,7 @@
   //   font-size: 200%;
   // }
   #main-footer {
-    font-size: 150%;
+    font-size: 130% !important;
   }
 }
 

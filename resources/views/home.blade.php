@@ -26,7 +26,7 @@
       <ul>
         <li>
           <div class="card">
-            <img src="img/code1.jpeg" alt="project">
+            <img src="img/robotic-arm.jpg" alt="project">
             <div class="card-content">
               {{ __('home.arduino') }}
             </div>
@@ -42,7 +42,7 @@
         </li>
         <li>
           <div class="card">
-            <img src="img/code1.jpeg" alt="project">
+            <img src="img/smarthouse.jpg" alt="project">
             <div class="card-content">
               {{ __('home.smart_house') }}
             </div>
@@ -79,6 +79,10 @@
           <div class="tooltip">
             <span class="tooltiptext">Vuejs</span>
             <a href="https://vuejs.org/"><img src="img/vuejs.png" alt="Vuejs"></a>
+          </div>
+          <div class="tooltip">
+            <span class="tooltiptext">React JS & React Native</span>
+            <a href="https://reactjs.org/"><img src="img/react.png" alt="React JS"></a>
           </div>
 {{--           <div class="tooltip">
             <span class="tooltiptext">Angular JS</span>
@@ -131,6 +135,10 @@
           <div class="tooltip">
             <span class="tooltiptext">French (Beginner)</span>
             <a href="https://en.wikipedia.org/wiki/France"><img src="img/france.png" alt="France"></a>
+          </div>
+          <div class="tooltip">
+            <span class="tooltiptext">Russian (Beginner)</span>
+            <a href="https://en.wikipedia.org/wiki/Russia"><img src="img/russia.png" alt="Russia"></a>
           </div>
           <div class="tooltip">
             <span class="tooltiptext">Spanish (Native)</span>
