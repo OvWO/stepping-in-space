@@ -1,35 +1,36 @@
 html,
 body {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  background: #222;
-  color: #fff;
-  overflow-X: hidden;
-  outline: none;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background: #222;
+    color: #fff;
+    overflow-X: hidden;
+    outline: none;
 }
 
 .blue {
-  color: #259bfa;
+    color: #259bfa;
 }
 
 .light-blue {
-  color: #0ff;
+    color: #0ff;
 }
 
 .yellow {
-  color: #fae421
+    color: #fae421
 }
 
 .orange {
-  color: #f77729
+    color: #f77729
 }
 
 .light-green {
-  color: #56ff50
+    color: #56ff50
 }
 
 .purple {
-  color: #b34dd4
+    color: #b34dd4
 }
+
 
 
 
@@ -42,66 +43,67 @@ body {
 /*************************************************************/
 
 .bg-img {
-  width: 100vw;
-  height: 100vh;
-  background: url("/img/code4.jpg") no-repeat 50% 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+    width: 100vw;
+    height: 100vh;
+    background: url("/img/code4.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 
 .header-content {
-  display: block;
-  position: relative;
-  text-align: center;
-  vertical-align: middle;
-  top: 40vh;
-  color: #fff;
-  font-size: 150%;
-  margin: auto;
+    display: block;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    top: 40vh;
+    color: #fff;
+    font-size: 150%;
+    margin: auto;
 }
 
 .header-content h1 {
-  display: inline-block;
-  background-color: #000;
-  padding: 20px;
-  margin: auto;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+    display: inline-block;
+    background-color: #000;
+    padding: 20px;
+    margin: auto;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 .navigate div {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  top: 20px;
-  margin: auto;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  border: #000 3px solid;
-  transition: all ease-in-out 150ms;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 20px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    border: #000 3px solid;
+    transition: all ease-in-out 150ms;
 }
 
 .navigate {
-  display: inline-block;
-  position: relative;
-  float: center;
-  color: #56ff50;
-  font-size: 430%;
-  margin: 25px auto;
-  transition: all ease-in-out 150ms;
+    display: inline-block;
+    position: relative;
+    float: center;
+    color: #56ff50;
+    font-size: 430%;
+    margin: 25px auto;
+    transition: all ease-in-out 150ms;
 }
 
 .navigate div:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  border: #000 3px solid;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: #000 3px solid;
 }
 
 .navigate:hover {
-  color: #67d0f9;
+    color: #67d0f9;
 }
+
 
 
 /*************************************************************/
@@ -113,51 +115,52 @@ body {
 /*************************************************************/
 
 .content {
-  background: #222;
-  color: #fff;
+    background: #222;
+    color: #fff;
 }
 
 .dark {
-  background: #222;
-  color: #fff;
+    background: #222;
+    color: #fff;
 }
 
 .light {
-  background: #fff;
-  color: #222;
+    background: #fff;
+    color: #222;
 }
 
 section {
-  font-size: 110%;
-  max-width: 70%;
-  margin: auto;
-  padding: 50px;
-  text-align: justify;
+    font-size: 110%;
+    max-width: 70%;
+    margin: auto;
+    padding: 50px;
+    text-align: justify;
 }
 
 section h2 {
-  font-size: 230%;
-  text-align: center;
-  padding-bottom: 30px;
-  padding-top:25px;
+    font-size: 230%;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 25px;
 }
 
 #me {
-  background-image: url('/img/man2.jpeg');
-  float: left;
-  height: 400px;
-  width: 48%;
-  background-position: center;
-  background-repeat: no-repeat;
+    background-image: url('/img/man2.jpeg');
+    float: left;
+    height: 400px;
+    width: 48%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 
 section#about p {
-  width: 50%;
-  float: right;
-  line-height: 1.6rem;
-  font-size: 120%
+    width: 50%;
+    float: right;
+    line-height: 1.6rem;
+    font-size: 120%
 }
+
 
 
 
@@ -175,38 +178,40 @@ section#about p {
 .parallax-image1,
 .parallax-image2,
 .parallax-image3 {
-  position: relative;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  width: 100%;
-  background-image: url('/img/code4.jpg');
-  min-height: 400px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    background-image: url('/img/code4.jpg');
+    min-height: 400px;
 }
 
 .parallax-text {
-  position: absolute;
-  top: 50%;
-  text-align: center;
-  padding: 7px 13px;
-  vertical-align: middle;
-  margin: auto;
-  width: 95vw;
-  font-size: 300%;
-  letter-spacing: 8px;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    padding: 7px 13px;
+    vertical-align: middle;
+    margin: auto;
+    width: 95vw;
+    font-size: 300%;
+    letter-spacing: 8px;
 }
 
 .parallax-text .border {
-  background-color: #000;
-  color: #fff;
-  padding: 20px;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
 }
 
 .border {
-  margin: auto;
-  min-width: 100%;
+    margin: auto;
+    min-width: 100%;
 }
+
+
 /*************************************************************/
 
 
@@ -216,26 +221,27 @@ section#about p {
 /*************************************************************/
 
 #portfolio img {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 #portfolio ul {
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
 }
 
 #portfolio li {
-  width: 31%;
-  margin-bottom: 1em;
+    width: 31%;
+    margin-bottom: 1em;
 }
 
 .card-content {
-  width: 100%;
-  float: none; // line-height: 1.8rem;
-  font-size: 150%;
+    width: 100%;
+    float: none; // line-height: 1.8rem;
+    font-size: 150%;
 }
+
 
 
 
@@ -250,195 +256,195 @@ section#about p {
 /*************************************************************/
 
 #contact {
-  font-size: 20px;
-  display: flex;
+    font-size: 20px;
+    display: flex;
 }
 
 .container {
-  border: 2px solid #000;
-  border-radius: 50px;
-  margin: auto;
-  width: 90%;
-  background-color: #ddd;
+    border: 2px solid #000;
+    border-radius: 50px;
+    margin: auto;
+    width: 90%;
+    background-color: #ddd;
 }
 
 #skills {
-  width: 50%;
+    width: 50%;
 }
 
 #skills p {
-  padding-left: 8.7%;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  font-size: 22px;
+    padding-left: 8.7%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-size: 22px;
 }
 
 .skills {
-  border-radius: 50px;
-  text-align: center;
-  line-height: 47.5px;
-  color: #000;
-  font-weight: bold;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 47.5px;
+    color: #000;
+    font-weight: bold;
 }
 
 .web {
-  width: 80%;
-  background: linear-gradient(to bottom right, #0ff, #b34dd4); // background-color: #2690d4;
+    width: 80%;
+    background: linear-gradient(to bottom right, #0ff, #b34dd4); // background-color: #2690d4;
 }
 
 .android {
-  width: 40%;
-  background: linear-gradient(to bottom right, #56ff50, #0ff); // background-color: #56ff50;
+    width: 40%;
+    background: linear-gradient(to bottom right, #56ff50, #0ff); // background-color: #56ff50;
 }
 
 .iOS {
-  width: 10%;
-  background: linear-gradient(to bottom right, #b34dd4, #f77729); // background-color: #b34dd4;
+    width: 10%;
+    background: linear-gradient(to bottom right, #b34dd4, #f77729); // background-color: #b34dd4;
 }
 
 #contact h3 {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 #skills-icons {
-  margin-top: 4px;
-  display: inline-block;
-  padding: 1rem;
-  max-width: 90%;
+    margin-top: 4px;
+    display: inline-block;
+    padding: 1rem;
+    max-width: 90%;
 }
 
 #skills-icons img {
-  width: 100px;
-  height: 100px;
+    width: 100px;
+    height: 100px;
 }
 
 #skills-icons p {
-  display: inline-block;
-  font-size: 90px;
+    display: inline-block;
+    font-size: 90px;
 }
 
 
 .tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
 }
 
 .tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
-  opacity: 0;
-  transition: opacity 0.3s;
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
 .tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
 }
 
 .tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
+    visibility: visible;
+    opacity: 1;
 }
 
 #contact-me {
-  width: 45%;
+    width: 45%;
 }
 
 #contact-me form label {
-  display: block;
-  font-size: 25px;
-  padding: 8px 0;
+    display: block;
+    font-size: 25px;
+    padding: 8px 0;
 }
 
 // #contact-me form button,
 #contact-me form input,
 #contact-me form textarea {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  background: #ccc;
-  font-size: 20px;
-  width: 94.5%; // width: 100%;
-  padding: 10px;
-  border: 1px solid #000;
-  line-height: 1.3;
-  border-radius: 10px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background: #ccc;
+    font-size: 20px;
+    width: 94.5%; // width: 100%;
+    padding: 10px;
+    border: 1px solid #000;
+    line-height: 1.3;
+    border-radius: 10px;
 }
 
 #contact-me form input,
 #contact-me form textarea,
 #contact-me form button {
-  margin-left: 4%;
+    margin-left: 4%;
 }
 
 #contact-me form button {
-  // display: block;
-  padding: 1rem 0;
-  border: 1px solid #000;
-  background: linear-gradient(to bottom right, #0ff, #b34dd4); // background-color: #2690d4;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 100%;
-  border-radius: 10px;
-  transition: 1s; // width: 97.8%;
-  width: 100%; // position: relative;
+    // display: block;
+    padding: 1rem 0;
+    border: 1px solid #000;
+    background: linear-gradient(to bottom right, #0ff, #b34dd4); // background-color: #2690d4;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 100%;
+    border-radius: 10px;
+    transition: 1s; // width: 97.8%;
+    width: 100%; // position: relative;
 }
 
 #contact-me form button:hover,
 #contact-me form button:focus {
-  cursor: pointer;
-  color: #fff;
+    cursor: pointer;
+    color: #fff;
 }
 
 #contact-me form input:focus,
 #contact-me form textarea:focus {
-  background: linear-gradient(to bottom right, #fff, #ccc);
+    background: linear-gradient(to bottom right, #fff, #ccc);
 }
 
 
 #contact-me ul {
-  list-style: none; // background: rgba(0, 0, 0, 0.9);
-  overflow: hidden;
-  color: #fff;
-  text-align: center;
-  margin: 0;
-  -webkit-transition: 1s;
-  transition: 1s; // padding-left
+    list-style: none; // background: rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    -webkit-transition: 1s;
+    transition: 1s; // padding-left
 }
 
 #contact-me ul li {
-  display: inline-block;
-  padding: 20px;
+    display: inline-block;
+    padding: 20px;
 }
 
 #contact-me ul li a {
-  font-size: 72px;
-  position: relative;
-  text-align: center;
-  top: 10px;
-  text-decoration: none;
-  color: #fff;
+    font-size: 72px;
+    position: relative;
+    text-align: center;
+    top: 10px;
+    text-decoration: none;
+    color: #fff;
 }
 
-#contact-me div#social-buttons{
-  padding-left:8%;
+#contact-me div#social-buttons {
+    padding-left: 8%;
+    min-width: 100%;
 }
-
 
 /*************************************************************/
 
@@ -449,39 +455,38 @@ section#about p {
 /*************************************************************/
 
 #main-footer {
-  padding: 2em;
-  background: #222;
-  color: #fff;
-  text-align: center;
+    padding: 2em;
+    background: #222;
+    color: #fff;
+    text-align: center;
 }
 
 #main-footer a {
-  color: #2690d4;
-  text-decoration: none;
+    color: #2690d4;
+    text-decoration: none;
 }
 
 #main-footer div {
-  padding-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 #main-footer a.navigate {
-  position: relative;
-  font-size: 400%;
+    position: relative;
+    font-size: 400%;
 }
 
 #main-footer a#back-to-top {
-  position: relative;
-  top: 10px;
-  padding: 10px 20px;
-  background: linear-gradient(to bottom right, #0ff, #56ff50);
-  color: #000;
-  font-weight: bold;
-  transition: all ease-in-out 200ms;
-  border: 1px solid black;
-  border-radius: 50px;
+    position: relative;
+    top: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(to bottom right, #0ff, #56ff50);
+    color: #000;
+    font-weight: bold;
+    transition: all ease-in-out 200ms;
+    border: 1px solid black;
+    border-radius: 50px;
 }
 
 #main-footer a#back-to-top:hover {
-  background: linear-gradient(to bottom right, #56ff50, #0ff);
-  // color: #aaa;
+    background: linear-gradient(to bottom right, #56ff50, #0ff); // color: #aaa;
 }

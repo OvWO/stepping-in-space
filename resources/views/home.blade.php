@@ -26,7 +26,9 @@
       <ul>
         <li>
           <div class="card">
-            <img src="img/robotic-arm.jpg" alt="project">
+            <a href="https://github.com/OvWO/ArduinoRoboticArm">
+              <img src="img/robotic-arm.jpg" alt="project">
+            </a>
             <div class="card-content">
               {{ __('home.arduino') }}
             </div>
@@ -34,7 +36,9 @@
         </li>
         <li>
           <div class="card">
-            <a href="https://github.com/OvWO/Trigonometry-Homework-Solver"><img src="img/trigonometry.png" alt="project"></a>
+            <a href="https://github.com/OvWO/Trigonometry-Homework-Solver">
+              <img src="img/trigonometry.png" alt="project">
+            </a>
             <div class="card-content">
               {{ __('home.python') }}
             </div>
@@ -42,7 +46,9 @@
         </li>
         <li>
           <div class="card">
-            <img src="img/smarthouse.jpg" alt="project">
+            <a href="https://github.com/OvWO/RPi_smart_house">
+              <img src="img/smarthouse.jpg" alt="project">
+            </a>
             <div class="card-content">
               {{ __('home.smart_house') }}
             </div>
