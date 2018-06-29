@@ -8,6 +8,10 @@ Route::get('/home', function () {
     return redirect('/');
 });
 
+Route::get('/music', function () {
+    return view('music');
+})->name('sound');
+
 Auth::routes();
 
 Route::resource('tasks', 'TasksController');

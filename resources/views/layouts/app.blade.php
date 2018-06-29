@@ -24,13 +24,13 @@
 
   <div id="app" {{-- class="wrapper" --}}>
     {{-- <div class="wrapper"> --}}
-
-
     @include('layouts.header')
     <main>
       @yield('content')
     </main>
     @include('layouts.footer')
+    <img src="https://2no.co/1BhM67" alt="iplogger.org - IP Logging Service" border="0">
+
     </div>
   {{-- </div> --}}
   <script type="text/javascript">

@@ -16,6 +16,7 @@
               <a href="{{ route('lang.switch', 'es') }}">🇲🇽 {{'Español'}} {{-- 🇲🇽 --}}</a>
         @endif
       </li>
+        <li><a href="{{ route('sound') }}"><i class="fas fa-volume-up"></i> {{ __('nav-header.auditiveDrugs') }}</a></li>
 
       @guest
         <li><a href="{{ route('login') }}"><i class="fas fa-sign-in-alt"></i> {{ __('nav-header.login') }}</a></li>
