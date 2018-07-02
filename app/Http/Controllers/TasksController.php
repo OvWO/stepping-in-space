@@ -58,8 +58,9 @@ class TasksController extends Controller
         // $task->title = request('title');
         // $task->user_id = Auth::id();
         // $task->save();
+        // var_dump($request)
 
-        if (Task::count() < 3){
+        if (Task::where('user_id', '=', Auth::id())->count() < 3){
             Task::create([
                 'title' => ucfirst($request['title']),
                 'user_id' => Auth::id()
@@ -157,7 +158,3 @@ class TasksController extends Controller
         return redirect('tasks');
     }
 }
-
-
-
-
