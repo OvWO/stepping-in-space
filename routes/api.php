@@ -17,10 +17,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('sample-restful-apis', function()
+Route::get('test', function()
 {
     return json_encode(array(
       1 => "expertphp",
-      2 => "demo"
+      2 => "demo",
+      3 => "HOLA"
     ));
 });
