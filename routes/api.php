@@ -19,8 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('sample-restful-apis', function()
 {
-    return array(
+    return json_encode(array(
       1 => "expertphp",
       2 => "demo"
-    );
+    ));
 });
