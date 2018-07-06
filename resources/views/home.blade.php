@@ -1,4 +1,4 @@
-{{-- https://safe-atoll-78199.herokuapp.com/ --}}
+ {{-- https://safe-atoll-78199.herokuapp.com/ --}}
 @extends('layouts.app')
 @section('content')
 <div class="wrapper">
