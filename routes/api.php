@@ -16,3 +16,11 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('sample-restful-apis', function()
+{
+    return array(
+      1 => "expertphp",
+      2 => "demo"
+    );
+});
