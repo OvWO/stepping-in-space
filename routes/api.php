@@ -25,5 +25,5 @@ Route::get('test', function()
     //   3 => "HELLO"
     // ));
 
-    return json_encode(App\User::all());
+    return App\User::all();
 });
