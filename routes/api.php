@@ -19,9 +19,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('test', function()
 {
-    return json_encode(array(
-      1 => "php",
-      2 => "demo",
-      3 => "HELLO"
-    ));
+    // return json_encode(array(
+    //   1 => "php",
+    //   2 => "demo",
+    //   3 => "HELLO"
+    // ));
+
+    return json_encode(App\User::all());
 });
