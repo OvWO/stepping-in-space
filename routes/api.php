@@ -13,17 +13,15 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::post('register', '\App\Http\Controllers\Api\Auth\RegisterController@register');
+Route::post('login', '\App\Http\Controllers\Api\Auth\LoginController@login');
+Route::post('refresh', '\App\Http\Controllers\Api\Auth\LoginController@refresh');
+// Route::post('social_auth', '\App\Http\Controllers\Api\Auth\SocialAuthController@socialAuth');
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('test', function()
-{
-    // return json_encode(array(
-    //   1 => "php",
-    //   2 => "demo",
-    //   3 => "HELLO"
-    // ));
-
+Route::get('test', function() {
     return App\User::all();
 });
