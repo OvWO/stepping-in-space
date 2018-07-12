@@ -11,14 +11,12 @@
         <li><a href="{{ route('tasks.index') }}"><i class="fas fa-paste"></i> {{ __('nav-header.tasks') }}</a></li>
       <li>
         @if ('es' == App::getLocale())
-              <a href="{{ route('lang.switch', 'en') }}">🇺🇸 {{'English'}}</a>
+            <a href="{{ route('lang.switch', 'en') }}">🇺🇸 {{'English'}}</a>
         @else
-              <a href="{{ route('lang.switch', 'es') }}">🇲🇽 {{'Español'}} {{-- 🇲🇽 --}}</a>
+            <a href="{{ route('lang.switch', 'es') }}">🇲🇽 {{'Español'}} {{-- 🇲🇽 --}}</a>
         @endif
       </li>
-{{--         <li><a href="{{ route('sound') }}"><i class="fas fa-volume-up"></i> {{ __('nav-header.auditiveDrugs') }}</a></li>
- --}}
-         <li><a href="http://leancoding.co/6KS0W4.steppin-in-space"><i class="fas fa-volume-up"></i> {{ __('nav-header.auditiveDrugs') }}</a></li>
+         <li><a href="{{ route('music') }}"><i class="fas fa-volume-up"></i> {{ __('nav-header.auditiveDrugs') }}</a></li>
 
       @guest
         <li><a href="{{ route('login') }}"><i class="fas fa-sign-in-alt"></i> {{ __('nav-header.login') }}</a></li>

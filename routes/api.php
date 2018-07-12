@@ -14,25 +14,29 @@ use Illuminate\Http\Request;
 */
 
 Route::post('register', '\App\Http\Controllers\Api\Auth\RegisterController@register');
-// Route::post('login', '\App\Http\Controllers\Api\Auth\LoginController@login');
+Route::post('login', '\App\Http\Controllers\Api\Auth\LoginController@login');
 // Route::post('refresh', '\App\Http\Controllers\Api\Auth\LoginController@refresh');
 // Route::post('social_auth', '\App\Http\Controllers\Api\Auth\SocialAuthController@socialAuth');
 
 
 Route::middleware('auth:api')->group(function () {
+
     Route::post('logout', 'Api\Auth\LoginController@logout');
 
-    Route::get('posts', 'Api\PostController@index');
+    Route::resource('tasks', 'Api\TasksController')
+         ->except(['show','create', 'edit', 'update']);
+    Route::post('/tasks/markAsDone/{id}', 'Api\TasksController@markAsDone');
+    Route::post('/tasks/markAsUndone/{id}', 'Api\TasksController@markAsUndone');
+    // Route::post('tasks', 'Api\TasksController@store')->name('tasks.store');
+    Route::put('tasks', 'Api\TasksController@update')->name('tasks.update');
 
-/*
-    // Show article
-    Route::get('article/{id}', 'Api\ArticleController@show');
+
+
     // Create new article
-    Route::post('article', 'Api\ArticleController@store');
-    // Create new article
-    Route::put('article', 'Api\ArticleController@store');
+    // Route::post('article', 'Api\ArticleController@store');
+    // Update new article
     // Delete article
-    Route::delete('article/{id}', 'Api\ArticleController@destroy');*/
+    // Route::delete('article/{id}', 'Api\ArticleController@destroy');
 });
 
 

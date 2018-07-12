@@ -142,8 +142,6 @@ class TasksController extends Controller
     {
         $task = Task::find($id);
         $task->complete = true;
-            // dump(Task::find($id)
-            // ->complete);
         $task->save();
         return redirect('tasks');
     }
@@ -152,8 +150,6 @@ class TasksController extends Controller
     {
         $task = Task::find($id);
         $task->complete = false;
-            // dump(Task::find($id)
-            // ->complete);
         $task->save();
         return redirect('tasks');
     }

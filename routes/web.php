@@ -1,4 +1,14 @@
 <?php
+/*
+|--------------------------------------------------------------------------
+| Todos
+|--------------------------------------------------------------------------
+|
+| Make TasksRepository to avoid repeated code. Probably custom validation for Tasks
+| and code of store Method.
+| Give Tasks a max of 20 chars
+*/
+
 
 Route::get('/', function () {
     return view('home');
@@ -10,7 +20,7 @@ Route::get('/home', function () {
 
 Route::get('/music', function () {
     return view('music');
-})->name('sound');
+})->name('music');
 
 Auth::routes();
 
