@@ -37,4 +37,11 @@ class Task extends Model
         // hasOne(RelatedModel, foreignKeyOnRelatedModel = task_id, localKey = id)
         return $this->hasOne(User::class);
     }
+
+    public function toggleComplete($status)
+    {
+
+        $this->complete = $status;
+        return $this->save();
+    }
 }

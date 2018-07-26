@@ -25,10 +25,9 @@ Route::middleware('auth:api')->group(function () {
 
     Route::resource('tasks', 'Api\TasksController')
          ->except(['show','create', 'edit', 'update']);
-    Route::post('/tasks/markAsDone/{id}', 'Api\TasksController@markAsDone');
-    Route::post('/tasks/markAsUndone/{id}', 'Api\TasksController@markAsUndone');
-    // Route::post('tasks', 'Api\TasksController@store')->name('tasks.store');
-    Route::put('tasks', 'Api\TasksController@update')->name('tasks.update');
+    Route::post('/tasks/toggleComplete/{id}', 'Api\TasksController@toggleComplete');
+    // Route::put('tasks', 'Api\TasksController@store')->name('tasks.store');
+    Route::put('tasks', 'Api\TasksController@store')->name('tasks.update');
 
 
 

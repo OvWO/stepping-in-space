@@ -1,14 +1,13 @@
 <?php
 /*
 |--------------------------------------------------------------------------
-| Todos
+| To do
 |--------------------------------------------------------------------------
+||
+| Additionally, add code to handle an incorrect 'id' passed in the url.
 |
-| Make TasksRepository to avoid repeated code. Probably custom validation for Tasks
-| and code of store Method.
-| Give Tasks a max of 20 chars
+| Change the name of hasLessThanAllowed function to an isLazy. This requires changes in code
 */
-
 
 Route::get('/', function () {
     return view('home');
@@ -27,6 +26,7 @@ Auth::routes();
 Route::resource('tasks', 'TasksController');
 Route::post('/tasks/markAsDone/{id}', 'TasksController@markAsDone');
 Route::post('/tasks/markAsUndone/{id}', 'TasksController@markAsUndone');
+Route::post('/tasks/toggleComplete/{id}', 'TasksController@toggleComplete');
 
 Route::get('lang/{lang}', ['as'=>'lang.switch', 'uses'=>'LanguageController@switchLang']);
 

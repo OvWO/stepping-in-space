@@ -27,7 +27,7 @@ class Task extends JsonResource
     {
         return [
             'version' => '1.0.0',
-            'url' => 'https://steppin-in.space'
+            'url' => url('/')
         ];
     }
 }

@@ -119,7 +119,7 @@ class TasksController extends Controller
       // dump ($id);
       // dump ($request);
 
-      $task = Task::find($id);
+      $task = Task::findOrFail($id);
       $task->title = $request->title;
       $task->save();
       return redirect('/tasks')->with('message', 'Task updated succesfully');
@@ -133,7 +133,6 @@ class TasksController extends Controller
      */
     public function destroy($id)
     {
-                  var_dump('hola');
           Task::findOrFail($id)->delete();
           return redirect('/tasks')->with('message', 'Task has been deleted!!');
     }
@@ -151,6 +150,10 @@ class TasksController extends Controller
         $task = Task::find($id);
         $task->complete = false;
         $task->save();
+        // Task::find($id)
+        //     ->setStatus(false);
+        //     ->save();
+
         return redirect('tasks');
     }
 }
