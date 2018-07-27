@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Api;
+
 use Auth;
 use App\Task;
 use App\User;
@@ -8,8 +9,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TaskValidator;
 use App\Repositories\TasksRepository;
-use \App\Repositories\UserRepository;
-// use Illuminate\Support\Facades\Validator;
+use App\Repositories\UserRepository;
 use App\Http\Resources\Task as TaskResource;
 
 class TasksController extends Controller
@@ -24,8 +24,7 @@ class TasksController extends Controller
     public function index()
     {
         // Check if user has Tasks else, throw an error
-        if ((new UserRepository)->hasTasks())
-        {
+        if ((new UserRepository)->hasTasks()) {
             // Get the tasks of the user in descending order
             $tasks = (new TasksRepository)->all();
 
@@ -34,10 +33,10 @@ class TasksController extends Controller
             $tasksCount = $tasks->count();
 
             return (new TaskResource($tasks))
-                ->additional([
-                    'message' =>
-                        'Success: You have ' . $tasksCount . ($tasksCount == 1 ? ' task' : ' tasks')
-                    ]);
+               ->additional([
+                   'message' =>
+                       'Success: You have ' . $tasksCount . ($tasksCount == 1 ? ' task' : ' tasks')
+                   ]);
         }
 
         return response()
@@ -48,17 +47,15 @@ class TasksController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store or Update a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  App\Http\Requests\TaskValidator  $request
      * @return \App\Http\Resources\Task
      */
     public function store(TaskValidator $request)
     {
-        if ($request->isMethod('post'))
-        {
-            if ((new UserRepository)->hasLessThanAllowed())
-            {
+        if ($request->isMethod('post')) {
+            if ((new UserRepository)->hasLessThanAllowed()) {
                 $task = Task::create([
                     'title' => ucfirst($request['title']),
                     'user_id' => Auth::id()
@@ -70,12 +67,11 @@ class TasksController extends Controller
                             'Task created successfully'
                         ]);
             }
-             return response()
-                ->json([
-                    'message' =>
-                        'Error: You can\'t have more than three tasks'
-                    ]);
-
+                return response()
+                    ->json([
+                        'message' =>
+                            'Error: You can\'t have more than three tasks'
+                        ]);
         }
 
         $task = Task::find($request->task_id);
@@ -99,32 +95,25 @@ class TasksController extends Controller
     public function destroy($id)
     {
         $task = Task::findOrFail($id);
-         if ($task->delete()) {
-             return (new TaskResource($task))
-                    ->additional([
-                        'message' =>
-                            'Success: Task deleted successfully'
-                        ]);
-         }
+        if ($task->delete()) {
+            return (new TaskResource($task))
+                   ->additional([
+                       'message' =>
+                           'Success: Task deleted successfully'
+                       ]);
+        }
     }
 
     public function toggleComplete($id)
     {
-        // Find the task and look if it's true
-        $task = Task::findOrFail($id);
+        // Find the task and toggle the complete value
+        $task = Task::findOrFail($id)
+            ->toggleComplete();
 
-        //!!!!!!! Move this code to the Model and make it a toggle. Not a 'set' function
-        if ($task->complete) {
-            $task->toggleComplete(false);
-        } else {
-            $task->toggleComplete(true);
-        }
-
-         return (new TaskResource($task))
-                ->additional([
-                    'message' =>
-                        'Task marked as ' . ($task->complete == true ? 'complete' : 'uncomplete')
-                    ]);    }
+        return (new TaskResource($task))
+            ->additional([
+                'message' =>
+                    'Task marked as ' . ($task->complete == true ? 'complete' : 'uncomplete')
+                ]);
+    }
 }
-
-

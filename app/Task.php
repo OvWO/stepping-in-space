@@ -15,7 +15,7 @@ class Task extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'user_id'
+        'title', 'user_id', 'complete'
     ];
 
     /**
@@ -38,10 +38,30 @@ class Task extends Model
         return $this->hasOne(User::class);
     }
 
-    public function toggleComplete($status)
+    /**
+     * Toggles the completed value of the model
+     * @return Task
+     */
+    public function toggleComplete()
     {
-
-        $this->complete = $status;
-        return $this->save();
+        if ($this->complete) {
+            $this->update(['complete' => false]);
+        } else {
+            $this->update(['complete' => true]);
+        }
+        return $this;
     }
 }
+
+// class Task extends Model
+// {
+//     public function scopeIncomplete($query)
+//     {
+//         return$query->where('completed', 0);
+//     }
+// }
+// Then, you can reuse any time you need incomplete task(s)
+
+// $incompleteTasks = Task::incomplete()->get();
+
+// $incompleteTasksAssignedToMe = Task::incomplete()->where('user_id', 123)->get();
