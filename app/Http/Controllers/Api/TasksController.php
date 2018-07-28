@@ -5,15 +5,24 @@ namespace App\Http\Controllers\Api;
 use Auth;
 use App\Task;
 use App\User;
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use App\Http\Requests\TaskValidator;
-use App\Repositories\TasksRepository;
+use App\Http\Resources\TaskResource;
+use App\Http\Controllers\Controller;
 use App\Repositories\UserRepository;
-use App\Http\Resources\Task as TaskResource;
+use App\Repositories\TasksRepository;
 
 class TasksController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      *
      * If tasks doesn't exists for the user return a Warning message
@@ -25,7 +34,7 @@ class TasksController extends Controller
     {
         // Check if user has Tasks else, throw an error
         if ((new UserRepository)->hasTasks()) {
-            // Get the tasks of the user in descending order
+            // Get the tasks of the user
             $tasks = (new TasksRepository)->all();
 
             // Saving the value of count() in a variable to avoid
@@ -104,6 +113,12 @@ class TasksController extends Controller
         }
     }
 
+    /**
+     * Toggles the complete value of a Task
+     *
+     * @param  int  $id
+     * @return \App\Http\Resources\Task
+     */
     public function toggleComplete($id)
     {
         // Find the task and toggle the complete value

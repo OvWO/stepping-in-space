@@ -10,8 +10,10 @@
   <title>{{ config('app.name', 'Laravel') }}</title>
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}" defer></script>
-    <!-- Styles -->
-  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <!-- Styles -->
+  {{-- <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> --}}
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
 
   <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">

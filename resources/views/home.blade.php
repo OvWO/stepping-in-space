@@ -8,8 +8,16 @@
       <h2>{{ __('home.about_header') }} <i class="fas fa-question-circle light-green"></i></h2>
       <div class="clearfix">
         <div id="me"></div>
-        <p>{{ __('home.about1') }}
-        <br><br>{{ __('home.about2') }}</p>
+        <div>
+            <p>{{ __('home.about1') }}
+                <br>
+                <br>
+                {{ __('home.about2') }}
+            </p>
+         <div>
+             <a href="{{ route('downloadCV') }}" target="_blank"><img src="img/pdf-icon.png" alt="Download CV" id="download"></a>
+        </div>
+        </div>
       </div>
     </section>
     <div class="parallax-image1">

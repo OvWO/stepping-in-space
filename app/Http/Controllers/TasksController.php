@@ -10,6 +10,16 @@ use Illuminate\Support\Facades\Validator;
 class TasksController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -17,17 +27,14 @@ class TasksController extends Controller
     public function index(Task $task)
     {
         if (Auth::check()) {
-            $tasks = Task::where('user_id', Auth::id())
-                ->orderBy('created_at', 'desc')
-                ->get();
-        /*->paginate(7)*/
-            return view('tasks.index', compact('tasks'));
+            $tasks = (new TasksRepository)->all();
 
+            return view('tasks.index', compact('tasks'));
         }
 
-       return redirect('login')
+        return redirect('login')
                     ->with('message', 'You must login to access your tasks');
-;
+        ;
     }
 
     /**
@@ -60,7 +67,7 @@ class TasksController extends Controller
         // $task->save();
         // var_dump($request)
 
-        if (Task::where('user_id', '=', Auth::id())->count() < 3){
+        if (Task::where('user_id', '=', Auth::id())->count() < 3) {
             Task::create([
                 'title' => ucfirst($request['title']),
                 'user_id' => Auth::id()
@@ -106,9 +113,9 @@ class TasksController extends Controller
     public function update(Request $request, $id)
     {
 
-      $validator = Validator::make($request->all(), [
+        $validator = Validator::make($request->all(), [
           'title' => 'required|max:255',
-      ]);
+        ]);
 
       // if ($validator->fails()) {
       //     return redirect('/tasklist/'.$request->id)
@@ -119,10 +126,10 @@ class TasksController extends Controller
       // dump ($id);
       // dump ($request);
 
-      $task = Task::findOrFail($id);
-      $task->title = $request->title;
-      $task->save();
-      return redirect('/tasks')->with('message', 'Task updated succesfully');
+        $task = Task::findOrFail($id);
+        $task->title = $request->title;
+        $task->save();
+        return redirect('/tasks')->with('message', 'Task updated succesfully');
     }
 
     /**
@@ -153,6 +160,21 @@ class TasksController extends Controller
         // Task::find($id)
         //     ->setStatus(false);
         //     ->save();
+
+        return redirect('tasks');
+    }
+
+    /**
+     * Toggles the complete value of a Task
+     *
+     * @param  int  $id
+     * @return \App\Http\Resources\Task
+     */
+    public function toggleComplete($id)
+    {
+        // Find the task and toggle the complete value
+        $task = Task::findOrFail($id)
+            ->toggleComplete();
 
         return redirect('tasks');
     }

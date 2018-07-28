@@ -136,6 +136,12 @@ section h2 {
   padding-top: 25px;
 }
 
+/*************************************************************/
+
+/************************* About **************************/
+
+/*************************************************************/
+
 #me {
   background-image: url("/img/man2.jpeg");
   float: left;
@@ -150,6 +156,12 @@ section#about p {
   float: right;
   line-height: 1.6rem;
   font-size: 120%;
+}
+
+section#about img#download {
+  padding: 20px 0 0 20px;
+  width: 10%;
+  height: auto;
 }
 
 /*************************************************************/
