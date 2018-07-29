@@ -1,8 +1,12 @@
  {{-- https://safe-atoll-78199.herokuapp.com/ --}}
 @extends('layouts.app')
 @section('content')
+
 <div class="wrapper">
   <div class="content">
+{{--           <h1> {{ Auth::check() ? Auth::user()->email : old('email') }}
+          </h1> --}}
+
     <!-- STARTS ABOUT -->
     <section id="about" class="dark">
       <h2>{{ __('home.about_header') }} <i class="fas fa-question-circle light-green"></i></h2>
@@ -15,7 +19,7 @@
                 {{ __('home.about2') }}
             </p>
          <div>
-             <a href="{{ route('downloadCV') }}" target="_blank"><img src="img/pdf-icon.png" alt="Download CV" id="download"></a>
+             <a href="{{ route('downloadCV') }}" target="_blank"><img src="img/pdf-icon.png" alt="Download CV" id="download"><br>Download CV</a>
         </div>
         </div>
       </div>
@@ -161,13 +165,20 @@
         </div>
       </div>
       <div id="contact-me">
+
         <h2>{{ __('home.contact') }} <i class="fas fa-id-card orange"></i></h2>
-        <form action="">
+        <form method="POST" action="{{ route('emailLuis') }}">
+          {{ csrf_field() }}
           <label for="email"><i class="fas fa-envelope light-green"></i> Email:</label>
-          <input type="email" name="email" placeholder="(Not Working Yet) Your Email">
+
+          <input type="email" name="email" placeholder="Add Translations Your Email" value="{{ Auth::guest() ? old('email') : Auth::user()->email}}">
+          <label for="name"><i class="fas fa-user blue"></i> Name:</label>
+          <input type="text" name="name" placeholder="Your Name" value="{{ Auth::guest() ? old('name') : Auth::user()->name }}">
           <label for="message"><i class="fas fa-comment purple"></i> {{ __('home.message') }}:</label>
-          <textarea name="message" cols="20" rows="8" placeholder="Send me a message..."></textarea>
+          <textarea name="message" cols="20" rows="8" placeholder="Send me a message..." value="{{ old('message') }}"></textarea>
           <button type="submit"><i class="fas fa-paper-plane"></i> {{ __('home.send_message') }}</button>
+          @include('partials.errors')
+        </form>
           <div id="social-buttons">
               <ul>
                 <li>
@@ -181,7 +192,6 @@
                 </li>
               </ul>
           </div>
-        </form>
       </div>
     </section>
     <div class="parallax-image3">

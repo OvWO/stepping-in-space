@@ -13,7 +13,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        // 'report:generate'
     ];
 
     /**
@@ -24,8 +24,11 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')
-        //          ->hourly();
+        $schedule->command('report:generate')
+                 // ->everyMinute()
+                 ->sundays()
+                 ->at('8:00')
+                ->emailOutputTo('luisclopez6@gmail.com');
     }
 
     /**

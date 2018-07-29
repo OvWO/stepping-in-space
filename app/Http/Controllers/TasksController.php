@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Auth;
 use App\Task;
 use Illuminate\Http\Request;
+use App\Http\Requests\TaskValidator;
+use App\Repositories\UserRepository;
+use App\Repositories\TasksRepository;
 use Illuminate\Support\Facades\Validator;
 
 class TasksController extends Controller
@@ -14,27 +17,26 @@ class TasksController extends Controller
      *
      * @return void
      */
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Task $task)
+    public function index()
     {
-        if (Auth::check()) {
-            $tasks = (new TasksRepository)->all();
+        $tasks = (new TasksRepository)->all();
 
+            // if ((new UserRepository)->hasTasks()) {
+        if (empty(json_decode($tasks))) {
+            session()->flash('message', 'You don\'t have any tasks yet');
             return view('tasks.index', compact('tasks'));
         }
-
-        return redirect('login')
-                    ->with('message', 'You must login to access your tasks');
-        ;
+            return view('tasks.index', compact('tasks'));
     }
 
     /**
@@ -50,45 +52,30 @@ class TasksController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  App\Http\Requests\TaskValidator  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TaskValidator $request)
     {
-        $this->validate(request(), [
-            'title' => 'required|min:2'
-        ]);
+        if ($request->isMethod('post')) {
+            if ((new UserRepository)->hasLessThanAllowed()) {
+                Task::create([
+                    'title' => ucfirst($request['title']),
+                    'user_id' => Auth::id()
+                ]);
 
-        // return Auth::id();
-
-        // $task = new Task;
-        // $task->title = request('title');
-        // $task->user_id = Auth::id();
-        // $task->save();
-        // var_dump($request)
-
-        if (Task::where('user_id', '=', Auth::id())->count() < 3) {
-            Task::create([
-                'title' => ucfirst($request['title']),
-                'user_id' => Auth::id()
-            ]);
+                return redirect('/tasks')
+                    ->with('message', 'New task created successfully');
+            }
 
             return redirect('/tasks')
-                ->with('message', 'New task created successfully');
-        }
-        return redirect('/tasks')
                 ->with('error', 'You can\'t have more than three tasks');
-    }
+        }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show()
-    {
-        return view('tasks.show', compact('task'));
+        $task = Task::findOrFail($request->id);
+        $task->title = $request->title;
+        $task->save();
+        return redirect('/tasks')->with('message', 'Task updated succesfully');
     }
 
     /**
@@ -104,35 +91,6 @@ class TasksController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-
-        $validator = Validator::make($request->all(), [
-          'title' => 'required|max:255',
-        ]);
-
-      // if ($validator->fails()) {
-      //     return redirect('/tasklist/'.$request->id)
-      //         ->withInput()
-      //         ->withErrors($validator);
-      // }
-
-      // dump ($id);
-      // dump ($request);
-
-        $task = Task::findOrFail($id);
-        $task->title = $request->title;
-        $task->save();
-        return redirect('/tasks')->with('message', 'Task updated succesfully');
-    }
-
-    /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
@@ -141,27 +99,7 @@ class TasksController extends Controller
     public function destroy($id)
     {
           Task::findOrFail($id)->delete();
-          return redirect('/tasks')->with('message', 'Task has been deleted!!');
-    }
-
-    public function markAsDone($id)
-    {
-        $task = Task::find($id);
-        $task->complete = true;
-        $task->save();
-        return redirect('tasks');
-    }
-
-    public function markAsUndone($id)
-    {
-        $task = Task::find($id);
-        $task->complete = false;
-        $task->save();
-        // Task::find($id)
-        //     ->setStatus(false);
-        //     ->save();
-
-        return redirect('tasks');
+          return redirect('/tasks')->with('message', 'Task deleted successfully');
     }
 
     /**
@@ -174,8 +112,8 @@ class TasksController extends Controller
     {
         // Find the task and toggle the complete value
         $task = Task::findOrFail($id)
-            ->toggleComplete();
+        ->toggleComplete();
 
-        return redirect('tasks');
+        return redirect('tasks')->with('message', 'Task marked as ' . ($task->complete == true ? 'complete' : 'uncomplete'));
     }
 }

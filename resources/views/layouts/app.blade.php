@@ -25,9 +25,11 @@
 <body>
 
   <div id="app" {{-- class="wrapper" --}}>
+
     {{-- <div class="wrapper"> --}}
     @include('layouts.header')
     <main>
+
       @yield('content')
     </main>
     @include('layouts.footer')

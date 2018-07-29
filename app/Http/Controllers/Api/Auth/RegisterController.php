@@ -8,15 +8,14 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreUserRequest;
 use Illuminate\Support\Facades\Validator;
 
-
 class RegisterController extends Controller
 {
     public function register(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required',
-            'email' => 'required|email',
-            'password' => 'required',
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:6|confirmed',
             'confirm_password' => 'required|same:password',
         ]);
 
@@ -28,7 +27,7 @@ class RegisterController extends Controller
         $input['password'] = bcrypt($input['password']);
         $user = User::create($input);
         $success['token'] =  $user->createToken('MyApp')->accessToken;
-        $success['name'] =  $user->name;
+        $success['name'] =  ucfirst($user->name);
 
         // return response()->json(['success'=>$success], $this->successStatus);
         return response()->json(['success'=>$success]);
@@ -50,9 +49,3 @@ class RegisterController extends Controller
     //     //If user is succesfully registrated fire an event (mail)
     //     // if ($user->save()){event();}
     //  }
-
-
-
-
-
-

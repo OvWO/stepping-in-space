@@ -11,14 +11,19 @@
 
       <label for="name">{{ __('auth.name') }}</label>
       <input type="text" name="name" placeholder="{{ __('auth.enterName') }}" value="{{ old('email') }}" required autofocus>
+
       <label for="email">{{ __('auth.email') }}</label>
       <input type="email" name="email" placeholder="{{ __('auth.enterEmail') }}" value="{{ old('email') }}" required >
+
       <label for="password">{{ __('auth.password') }}</label>
       <input type="password" name="password" placeholder="{{ __('auth.enterPassword') }}" required>
+
       <label for="password-confirm">{{ __('auth.passwordConfirmation') }}</label>
       <input type="password" name="password_confirmation" placeholder="{{ __('auth.confirmPassword') }}" required>
+
       <button type="submit">{{ __('auth.register') }} <i class="fas fa-sign-in-alt"></i></button>
       <a href="{{ route('login') }}">{{ __('auth.have-an-account') }}</a>
+      @include('partials.errors')
     </form>
   </div>
 </div>

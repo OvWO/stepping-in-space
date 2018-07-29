@@ -17,6 +17,7 @@ class UserRepository
     public function hasTasks()
     {
         // return Task::where('user_id', '=', Auth::id())->exists();
+        // empty(json_decode($tasks)) check this
         return User::findOrFail(Auth::id())->tasks()->exists();
     }
 
@@ -26,6 +27,7 @@ class UserRepository
     */
     public function hasLessThanAllowed()
     {
-        return Task::where('user_id', '=', Auth::id())->count() < 3;
+        $allowed = 3;
+        return Task::where('user_id', '=', Auth::id())->count() < $allowed;
     }
 }

@@ -20,6 +20,7 @@ class TasksController extends Controller
      */
     public function __construct()
     {
+   // Add api middleware??
         $this->middleware('auth');
     }
 
@@ -76,11 +77,11 @@ class TasksController extends Controller
                             'Task created successfully'
                         ]);
             }
-                return response()
-                    ->json([
-                        'message' =>
-                            'Error: You can\'t have more than three tasks'
-                        ]);
+            return response()
+                ->json([
+                    'message' =>
+                        'Error: You can\'t have more than three tasks'
+                    ]);
         }
 
         $task = Task::find($request->task_id);
@@ -93,7 +94,6 @@ class TasksController extends Controller
                             'Task updated successfully'
                         ]);
     }
-
 
     /**
      * Remove the specified resource from storage.
@@ -127,8 +127,8 @@ class TasksController extends Controller
 
         return (new TaskResource($task))
             ->additional([
-                'message' =>
-                    'Task marked as ' . ($task->complete == true ? 'complete' : 'uncomplete')
-                ]);
+            'message' =>
+                'Success: Task marked as ' . ($task->complete == true ? 'complete' : 'uncomplete')
+            ]);
     }
 }

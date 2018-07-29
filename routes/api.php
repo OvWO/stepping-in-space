@@ -26,25 +26,18 @@ Route::middleware('auth:api')->group(function () {
     Route::resource('tasks', 'Api\TasksController')
          ->except(['show','create', 'edit', 'update']);
     Route::post('/tasks/toggleComplete/{id}', 'Api\TasksController@toggleComplete');
-    // Route::put('tasks', 'Api\TasksController@store')->name('tasks.store');
     Route::put('tasks', 'Api\TasksController@store')->name('tasks.update');
 
-
-
-    // Create new article
-    // Route::post('article', 'Api\ArticleController@store');
-    // Update new article
-    // Delete article
-    // Route::delete('article/{id}', 'Api\ArticleController@destroy');
+    Route::get('/user', function (Request $request) {
+        return $request->user();
+    });
 });
 
 
 
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
 
-Route::get('test', function() {
+
+Route::get('test', function () {
     return App\User::all();
 });

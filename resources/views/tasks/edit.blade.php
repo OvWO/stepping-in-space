@@ -5,16 +5,15 @@
   <div id="tasks-div">
    <h1>Editing task #{{ $task->id }}from {{ $task->title }} to:</h1>
 
-    <form action="{{action('TasksController@update', $task->id)}}" method="POST">
+    <form action="{{action('TasksController@store', $task->id)}}" method="POST">
      {{ csrf_field() }}
-     {{ method_field('PATCH') }}
+     {{ method_field('PUT') }}
           <div>
             <label for="title">Title</label>
-            <input type="text" class="form-control" id="title" name="title" required>
-                        <button type="submit">Save changes</button>
-
+            <input type="hidden" name="id" value="{{ $task->id }}">
+            <input type="text" class="form-control" id="title" name="title" value="{{ $task->title }}">
+              <button type="submit">Save changes</button>
           </div>
-
           @include('partials.errors')
     </form>
     </div>

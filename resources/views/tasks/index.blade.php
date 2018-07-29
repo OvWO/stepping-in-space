@@ -29,9 +29,10 @@
               <i class="fas fa-edit"></i>
             </button>
           </a>
+          <form action="/tasks/toggleComplete/{{ $task->id }}" method="POST">
 
 
-@if ($task->complete)
+{{-- @if ($task->complete)
             <form action="/tasks/markAsUndone/{{ $task->id }}" method="POST">
 
 @else
@@ -39,7 +40,7 @@
 
 
 
-@endif
+@endif --}}
 
             {{ csrf_field() }}
             <button class="check" type="submit">
