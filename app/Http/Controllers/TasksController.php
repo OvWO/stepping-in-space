@@ -29,10 +29,10 @@ class TasksController extends Controller
      */
     public function index()
     {
-        $tasks = (new TasksRepository)->all();
+        // $tasks = (new TasksRepository)->all();
 
-            // if ((new UserRepository)->hasTasks()) {
-        if (empty(json_decode($tasks))) {
+        if ($tasks = (new TasksRepository)->all()) {
+        // if (empty(json_decode($tasks))) {
             session()->flash('message', 'You don\'t have any tasks yet');
             return view('tasks.index', compact('tasks'));
         }

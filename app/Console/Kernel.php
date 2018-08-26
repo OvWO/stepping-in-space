@@ -25,10 +25,10 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('report:generate')
-                 // ->everyMinute()
+                // ->everyMinute();
                  ->sundays()
-                 ->at('8:00')
-                ->emailOutputTo('luisclopez6@gmail.com');
+                 ->at('8:00');
+                // ->emailOutputTo('luisclopez6@gmail.com');
     }
 
     /**

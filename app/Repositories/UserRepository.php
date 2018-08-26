@@ -3,8 +3,9 @@
 namespace App\Repositories;
 
 use Auth;
-use App\User;
 use App\Task;
+use App\User;
+use Carbon\Carbon;
 
 class UserRepository
 {
@@ -16,8 +17,6 @@ class UserRepository
     */
     public function hasTasks()
     {
-        // return Task::where('user_id', '=', Auth::id())->exists();
-        // empty(json_decode($tasks)) check this
         return User::findOrFail(Auth::id())->tasks()->exists();
     }
 
@@ -28,6 +27,22 @@ class UserRepository
     public function hasLessThanAllowed()
     {
         $allowed = 3;
-        return Task::where('user_id', '=', Auth::id())->count() < $allowed;
+
+        $tasks = Task::where('user_id', '=', Auth::id())->count() < $allowed;
+
+        return $tasks->isEmpty() ? false : $tasks;
+    }
+
+    /**
+    * Get the users that has less than a week of Sign Up
+    * @return boolean
+    */
+    public function newUsers()
+    {
+        $weekAgo = Carbon::now()->subWeek();
+        $users = User::where('created_at', '>=', $weekAgo)
+            ->get(['email', 'name']);
+
+        return $users->isEmpty() ? false : $users;
     }
 }

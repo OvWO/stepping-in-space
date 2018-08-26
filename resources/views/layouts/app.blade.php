@@ -19,6 +19,9 @@
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link href="{{ asset('css/layouts.css') }}" rel="stylesheet">
   <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
+  {{-- tasks.css for flash messages --}}
+  <link href="{{ asset('css/tasks.css') }}" rel="stylesheet">
+
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 
@@ -26,6 +29,22 @@
 
   <div id="app" {{-- class="wrapper" --}}>
 
+{{--             <div class="success" id="flash-message" >
+                {{ session('message') }} <h1>holastyd</h1>
+            </div> --}}
+{{--          @if (session('message'))
+          <h1>tiene mensajge!!!! {{ session('message') }}</h1>
+        @endif --}}
+        @if (session('message'))
+            <div class="success" id="flash-message" >
+                {{ session('message') }}{{-- {{ $flash }} --}}
+            </div>
+        @endif
+        @if (session('error'))
+            <div class="alert" id="flash-message" role="alert">
+                {{ session('error') }}{{-- {{ $flash }} --}}
+            </div>
+        @endif
     {{-- <div class="wrapper"> --}}
     @include('layouts.header')
     <main>

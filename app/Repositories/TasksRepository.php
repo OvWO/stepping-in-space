@@ -17,14 +17,10 @@ class TasksRepository
      */
     public function all()
     {
-        // $tasks = Task::where('user_id', Auth::id())
-        //     ->orderBy('created_at', 'desc')
-        //     ->get();
-
-        // return empty(json_decode($tasks)) ? false : $tasks;
-
-        return Task::where('user_id', Auth::id())
+        $tasks = Task::where('user_id', Auth::id())
             ->orderBy('created_at', 'desc')
             ->get();
+
+        return $tasks->isEmpty() ? false : $tasks;
     }
 }

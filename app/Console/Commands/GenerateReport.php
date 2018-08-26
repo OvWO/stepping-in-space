@@ -3,9 +3,12 @@
 namespace App\Console\Commands;
 
 use App\User;
+use Carbon\Carbon;
+use App\Mail\ReportMail;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Log;
-use Carbon\Carbon;
+use App\Repositories\UserRepository;
+use Illuminate\Support\Facades\Mail;
 
 class GenerateReport extends Command
 {
@@ -39,12 +42,19 @@ class GenerateReport extends Command
      */
     public function handle()
     {
-        $weekAgo = Carbon::now()->subWeek();
-        $newUsers = User::where('created_at', '>=', $weekAgo)
-            ->get(['email', 'name']);
+        // $weekAgo = Carbon::now()->subWeek();
+        // $newUsers = User::where('created_at', '>=', $weekAgo)
+        //     ->get(['email', 'name']);
 
-        Log::info('Report generated succesfully...');
+        // if (!(new UserRepository)->newUsers()->isEmpty()) {
+        if ((new UserRepository)->newUsers()) {
+            Mail::to('luisclopez6@gmail.com')
+                ->send(new ReportMail($newUsers));
+                // ->queue();
 
-        echo $newUsers;
+            Log::info('Report generated succesfully...');
+        }
+
+        // echo $newUsers;
     }
 }

@@ -9,9 +9,6 @@ use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\EmailLuisValidator;
 use Illuminate\Support\Facades\Validator;
 
-// use Illuminate\Support\Facades\Redirect;
-// use Illuminate\Support\Facades\URL;
-
 class HomeController extends Controller
 {
     /**
@@ -40,12 +37,11 @@ class HomeController extends Controller
     public function emailLuis(EmailLuisValidator $request)
     {
         //session not working
-        session()->flash('message', 'blah blah blah');
+        // session()->flash('message', 'blah blah blah');
 
         Mail::to('luisclopez6@gmail.com')
             ->send(new ContactLuis($request->validated()));
-        // Not redirecting properly
-        // return Redirect::to(URL::previous() . "#contact");
+
         return redirect('home#contact')->with('message', 'Mail sent successfully');
     }
 }

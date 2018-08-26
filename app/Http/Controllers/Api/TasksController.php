@@ -34,10 +34,11 @@ class TasksController extends Controller
     public function index()
     {
         // Check if user has Tasks else, throw an error
-        if ((new UserRepository)->hasTasks()) {
-            // Get the tasks of the user
-            $tasks = (new TasksRepository)->all();
-
+        if ($tasks = (new TasksRepository)->all()) {
+/*        if ((new UserRepository)->hasTasks()) {
+*/            // Get the tasks of the user
+/*            $tasks = (new TasksRepository)->all();
+*/
             // Saving the value of count() in a variable to avoid
             // double call
             $tasksCount = $tasks->count();
