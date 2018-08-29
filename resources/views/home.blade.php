@@ -19,7 +19,7 @@
                 {{ __('home.about2') }}
             </p>
          <div>
-             <a href="{{ route('downloadCV') }}" target="_blank"><img src="img/pdf-icon.png" alt="Download CV" id="download"><br>Download CV</a>
+             <a href="{{ route('downloadCV') }}" target="_blank"><img src="img/pdf-icon.png" alt="Download CV" id="download">{{-- <br>Download CV --}}</a>
         </div>
         </div>
       </div>

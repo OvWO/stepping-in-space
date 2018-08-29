@@ -7,10 +7,11 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-//ShouldQueue throws an error
-class ReportMail extends Mailable //implements ShouldQueue
+class ReportMail extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
+
+    protected $newUsers;
 
     /**
      * Create a new message instance.

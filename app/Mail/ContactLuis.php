@@ -11,12 +11,12 @@ class ContactLuis extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
+    protected $data;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    // public function __construct($email, $name, $message)
     public function __construct($data)
     {
         $this->data = $data;

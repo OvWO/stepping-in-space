@@ -27,7 +27,6 @@ class UserRepository
     public function hasLessThanAllowed()
     {
         $allowed = 3;
-
         $tasks = Task::where('user_id', '=', Auth::id())->count() < $allowed;
 
         return $tasks->isEmpty() ? false : $tasks;

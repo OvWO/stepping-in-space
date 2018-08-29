@@ -14,6 +14,8 @@
 
     <div id="current-tasks">
     <h2>Current Tasks</h2>
+    {{-- Change the bottom two lines for something more inteligent --}}
+    @if($tasks)
     @foreach ($tasks as $task)
       <div class="task-row">
         <p>{{ $task->title }} </p>
@@ -62,6 +64,8 @@
         </div>
       </div>
       @endforeach
+      @else
+      @endif
     </div>
   </div>
 

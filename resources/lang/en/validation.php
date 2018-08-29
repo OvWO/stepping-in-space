@@ -101,8 +101,8 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'email' => [
+            'required' => '!!!!!!!!!!!!!!!We need to know your e-mail address!',
         ],
     ],
 

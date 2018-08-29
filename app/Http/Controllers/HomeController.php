@@ -20,7 +20,7 @@ class HomeController extends Controller
         // Get the file
         $file= public_path(). "/downloads/test.pdf";
 
-        // Set the headers into a var for readiness
+        // Set the headers into a var (for readiness)
         $headers = array(
               'Content-Type: application/pdf',
             );
@@ -36,12 +36,11 @@ class HomeController extends Controller
      */
     public function emailLuis(EmailLuisValidator $request)
     {
-        //session not working
-        // session()->flash('message', 'blah blah blah');
+        // session not working
+        session()->flash('messageeeee', 'blah blah blah');
 
         Mail::to('luisclopez6@gmail.com')
             ->send(new ContactLuis($request->validated()));
-
         return redirect('home#contact')->with('message', 'Mail sent successfully');
     }
 }

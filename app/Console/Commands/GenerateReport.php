@@ -42,18 +42,14 @@ class GenerateReport extends Command
      */
     public function handle()
     {
-        // $weekAgo = Carbon::now()->subWeek();
-        // $newUsers = User::where('created_at', '>=', $weekAgo)
-        //     ->get(['email', 'name']);
 
-        // if (!(new UserRepository)->newUsers()->isEmpty()) {
-        if ((new UserRepository)->newUsers()) {
+        if ($newUsers = (new UserRepository)->newUsers()) {
             Mail::to('luisclopez6@gmail.com')
                 ->send(new ReportMail($newUsers));
-                // ->queue();
 
             Log::info('Report generated succesfully...');
         }
+            Log::info('No new users this week');
 
         // echo $newUsers;
     }
