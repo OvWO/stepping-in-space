@@ -147,19 +147,19 @@
             <a href="https://www.arduino.cc/"><img src="img/arduino.png" alt="Arduino"></a>
           </div>
           <div class="tooltip">
-            <span class="tooltiptext">German (Beginner)</span>
+            <span class="tooltiptext">{{ __('home.german') }} ({{ __('home.beginner') }})</span>
             <a href="https://en.wikipedia.org/wiki/Germany"><img src="img/germany.png" alt="Germany"></a>
           </div>
           <div class="tooltip">
-            <span class="tooltiptext">French (Beginner)</span>
+            <span class="tooltiptext">{{ __('home.french') }} ({{ __('home.beginner') }})</span>
             <a href="https://en.wikipedia.org/wiki/France"><img src="img/france.png" alt="France"></a>
           </div>
           <div class="tooltip">
-            <span class="tooltiptext">Russian (Beginner)</span>
+            <span class="tooltiptext">{{ __('home.russian') }} ({{ __('home.beginner') }})</span>
             <a href="https://en.wikipedia.org/wiki/Russia"><img src="img/russia.png" alt="Russia"></a>
           </div>
           <div class="tooltip">
-            <span class="tooltiptext">Spanish (Native)</span>
+            <span class="tooltiptext">{{ __('home.spanish') }} ({{ __('home.native') }})</span>
             <a href="https://en.wikipedia.org/wiki/Mexico"><img src="img/mexico.png" alt="Mexico"></a>
           </div>
         </div>
@@ -169,13 +169,13 @@
         <h2>{{ __('home.contact') }} <i class="fas fa-id-card orange"></i></h2>
         <form method="POST" action="{{ route('emailLuis') }}">
           {{ csrf_field() }}
-          <label for="email"><i class="fas fa-envelope light-green"></i> Email:</label>
+          <label for="email"><i class="fas fa-envelope light-green"></i> {{ __('home.email') }}:</label>
 
-          <input type="email" name="email" placeholder="Add Translations Your Email" value="{{ Auth::guest() ? old('email') : Auth::user()->email}}">
-          <label for="name"><i class="fas fa-user blue"></i> Name:</label>
-          <input type="text" name="name" placeholder="Your Name" value="{{ Auth::guest() ? old('name') : Auth::user()->name }}">
+          <input type="email" name="email" placeholder="{{ __('home.yourEmail') }}" value="{{ Auth::guest() ? old('email') : Auth::user()->email}}">
+          <label for="name"><i class="fas fa-user blue"></i> {{ __('home.name') }}:</label>
+          <input type="text" name="name" placeholder="{{ __('home.yourName') }}" value="{{ Auth::guest() ? old('name') : Auth::user()->name }}">
           <label for="message"><i class="fas fa-comment purple"></i> {{ __('home.message') }}:</label>
-          <textarea name="message" cols="20" rows="8" placeholder="Send me a message..." value="{{ old('message') }}"></textarea>
+          <textarea name="message" cols="20" rows="8" placeholder="{{ __('home.sendMeAMessage') }}" value="{{ old('message') }}"></textarea>
           <button type="submit"><i class="fas fa-paper-plane"></i> {{ __('home.send_message') }}</button>
           @include('partials.errors')
         </form>

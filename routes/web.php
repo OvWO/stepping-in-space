@@ -54,7 +54,6 @@ Auth::routes();
 /**
  * Tasks routes
  */
-
 Route::resource('tasks', 'TasksController')->except(['show', 'update']);
 Route::put('tasks/{id}', 'TasksController@store')->name('tasks.update');
 Route::post('/tasks/toggleComplete/{id}', 'TasksController@toggleComplete');

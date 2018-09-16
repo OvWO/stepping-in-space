@@ -18,7 +18,7 @@ class HomeController extends Controller
     public function downloadCV()
     {
         // Get the file
-        $file= public_path(). "/downloads/test.pdf";
+        $file= public_path(). "/downloads/Luis Lopez.pdf";
 
         // Set the headers into a var (for readiness)
         $headers = array(
