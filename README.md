@@ -19,7 +19,6 @@ I know don't know it all!!!
 
 ### TO DO
 - ~~Stack Overflow Contact Image~~
-- ~~JSON API~~
 - ~~React Components~~
 - ~~New Navbar~~
 - ~~HTML & CSS refactor~~
