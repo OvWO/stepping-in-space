@@ -7,7 +7,6 @@ This website marks for me the graduation from beign a beginner to an intermediat
 Finally, though I learnt a lot from this project I don't meant to pretend to be an expert in the subject, but now I know of this topics and surely I can follow along other's people code and conversations when I see them.
 
 ### Things I also learnt
-I know don't know it all!!!
 - **File Downloads:** You can download my CV.
 - **Email:** Send me an email in the contact section.
 - **Schedule jobs:** I get notified whenever someone signs up.
